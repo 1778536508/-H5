@@ -1,0 +1,122 @@
+{
+	"Icon": [
+		{
+			"image": "assets/iocn/Bitmap Copy 2.png",
+			"text": "传统手工艺技能"
+		}, {
+			"image": "assets/iocn/Bitmap.png",
+			"text": "社会风俗礼仪"
+		}, {
+			"image": "assets/iocn/Bitmap Copy 2.png",
+			"text": "传统手工艺技能"
+		}, {
+			"image": "assets/iocn/Bitmap.png",
+			"text": "社会风俗礼仪"
+		}, {
+			"image": "assets/iocn/Bitmap Copy 2.png",
+			"text": "传统手工艺技能"
+		}, {
+			"image": "assets/iocn/Bitmap.png",
+			"text": "社会风俗礼仪"
+		}
+	],
+	"content": [
+		{
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap.png",
+			"text1": "苏绣，原指江苏东部各地刺绣之总称，包括苏州、无锡、常州、南通、扬州等地的传统刺绣…",
+			"_url": "pottery/suxiu.html",
+			"cls2": "forma_duce",
+			"text2": "苏绣",
+			"text3": "# 传统手工技艺-刺绣技艺",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}, {
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap1.png",
+			"text1": "姚慧芬，出生于苏州刺绣世家，自幼就开始学习刺绣。师从近代苏绣'仿真绣'大师沈寿的第三代传人牟志红和中国…",
+			"_url": "pottery/huifen.html",
+			"cls2": "forma_duce",
+			"text2": "姚惠芬",
+			"text3": "# 国家级非物质文化遗产代表性传承人",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}, {
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap.png",
+			"text1": "苏绣，原指江苏东部各地刺绣之总称，包括苏州、无锡、常州、南通、扬州等地的传统刺绣…",
+			"_url": "pottery/suxiu.html",
+			"cls2": "forma_duce",
+			"text2": "苏绣",
+			"text3": "# 传统手工技艺-刺绣技艺",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}, {
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap1.png",
+			"text1": "姚慧芬，出生于苏州刺绣世家，自幼就开始学习刺绣。师从近代苏绣'仿真绣'大师沈寿的第三代传人牟志红和中国…",
+			"_url": "pottery/huifen.html",
+			"cls2": "forma_duce",
+			"text2": "姚惠芬",
+			"text3": "# 国家级非物质文化遗产代表性传承人",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}, {
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap.png",
+			"text1": "苏绣，原指江苏东部各地刺绣之总称，包括苏州、无锡、常州、南通、扬州等地的传统刺绣…",
+			"_url": "pottery/suxiu.html",
+			"cls2": "forma_duce",
+			"text2": "苏绣",
+			"text3": "# 传统手工技艺-刺绣技艺",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}, {
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap1.png",
+			"text1": "姚慧芬，出生于苏州刺绣世家，自幼就开始学习刺绣。师从近代苏绣'仿真绣'大师沈寿的第三代传人牟志红和中国…",
+			"_url": "pottery/huifen.html",
+			"cls2": "forma_duce",
+			"text2": "姚惠芬",
+			"text3": "# 国家级非物质文化遗产代表性传承人",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}, {
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap.png",
+			"text1": "苏绣，原指江苏东部各地刺绣之总称，包括苏州、无锡、常州、南通、扬州等地的传统刺绣…",
+			"_url": "pottery/suxiu.html",
+			"cls2": "forma_duce",
+			"text2": "苏绣",
+			"text3": "# 传统手工技艺-刺绣技艺",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}, {
+			"cls1": "forma_imaGes",
+			"image1": "assets/images/Bitmap1.png",
+			"text1": "姚慧芬，出生于苏州刺绣世家，自幼就开始学习刺绣。师从近代苏绣'仿真绣'大师沈寿的第三代传人牟志红和中国…",
+			"_url": "pottery/huifen.html",
+			"cls2": "forma_duce",
+			"text2": "姚惠芬",
+			"text3": "# 国家级非物质文化遗产代表性传承人",
+			"image2": "assets/iocn/share.png",
+			"num1": "238",
+			"image3": "assets/iocn/Fill 1.png",
+			"num2": "119"
+		}
+	]
+}
