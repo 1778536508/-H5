@@ -2,22 +2,22 @@
 $(function () {
     $(window).scroll(function(){
         if ($(window).scrollTop()>10){
-        	$('#Return').fadeIn(200);
+        	$('#Return').fadeIn(100);
             $('#menu').css({
             	'bottom':'calc(13.7rem/2)',
             	'-webkit-transition':'all 0.1s'
             });
-            $('#box_list').hide(200);
+            $('#box_list').hide(100);
 //          $('#menu').fadeIn(200);
         }else{
-            $('#Return').fadeOut(200);
+            $('#Return').fadeOut(100);
             setTimeout(function(){
             	$('#menu').css({
 	            	'bottom':'calc(9.7rem/2)',
 	            	'-webkit-transition':'all 0.2s'
 	            });
             },200)
-            $('#box_list').show(500);
+            $('#box_list').show(100);
 //          $('#menu').fadeOut(200);
         }
     });
@@ -47,23 +47,23 @@ $(function () {
     
     //搜索
     $('#Text').focus(function(){
-    	$('#content').css('display','none');
-    	$('#box_search').css('display','block');
+//  	$('#content').css('display','none');
+//  	$('#box_search').css('display','block');
     	$('#content_search').css('display','none');
-    	//默认为聚焦状态
-    	$('#search_text').focus();
-    	
-    	
-    	
+//  	跳转页面
+    	location.href = 'search.html';
     })
-   
-
+    //默认为聚焦状态
+	$('#search_text').focus();
     //选中高光状态
-    $('#Catalog_list>li').click(function(){
-    	$(this).addClass('li1').siblings().removeClass('li1');
-    })
+   
     
     
+    
+    
+    
+    
+   
 
     
     

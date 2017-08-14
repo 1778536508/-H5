@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>非遗H5视觉</title>
+		<meta name="author" content="...">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <meta name="author" content="....">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Pragma" content="no-cache">
+		<meta name="description" content="...." />
+
+		<link rel="stylesheet" type="text/css" href="links/js/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/search.css"/>
+
+		<script src="links/js/rem.js" type="text/javascript" charset="utf-8"></script>
+        <script src="links/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="assets/js/Menu2.js" type="text/javascript" charset="utf-8"></script>
+
+        <link rel="stylesheet" type="text/css" href="links/swiper/css/swiper.min.css"/>
+        <script src="links/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="assets/js/banner.js" type="text/javascript" charset="utf-8"></script>
+        <script src="assets/js/scrollBar.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="templates/require/handlebars.js" type="text/javascript" charset="utf-8"></script>
+        <script src="templates/require/require.js" type="text/javascript" charset="utf-8"></script>
+        <!--<script src="require/jquery.ba-hashchange.js" type="text/javascript" charset="utf-8"></script>-->
+        <!--<script src="require/text.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+	<body>
+		<div class="box" id="box">
+			<!--上导航-->
+			<div class="box_header" id="box_header"></div>
+
+			<!--分类-->
+			<div class="box_list" id="box_list">
+				<ul>
+					<li id="li1">
+							<a href="javascript:;"><img src="links/img/souye.png"/></a>
+							<a href="javascript:;"><img src="assets/images/home.png"/></a>
+							<span>首页</span>
+					</li>
+					<li id="box_list_search" class="lii">
+							<a href="javascript:;"><img src="links/img/feiyiminglu.png"/></a>
+							<a href="javascript:;"><img src="assets/images/feiyi.png"/></a>
+							<span>搜索</span>
+					</li>
+					<li id="li2">
+							<a href="javascript:;"><img src="links/img/minglupass.png"/></a>
+							<a href="javascript:;"><img src="assets/images/pass.png"/></a>
+							<span>非遗名录</span>
+					</li>
+					<li id="li3">
+							<a href="javascript:;"><img src="links/img/shenbao.png"/></a>
+							<a href="javascript:;"><img src="assets/images/shenbao.png"/></a>
+							<span>我要申报</span>
+					</li>
+					<li id="li4">
+							<a href="javascript:;"><img src="links/img/Group 13.png"/></a>
+							<a href="javascript:;"><img src="assets/images/Group 13.png"/></a>
+							<span>官方服务</span>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<div class="content">
+
+
+				<!--搜索-->
+				<div class="content_search" id="content_search">
+					<!--删除按钮-->
+					<div class="banner_remove" id="">
+						<a href="javascript:;">
+							<span>|</span>
+							<img src="links/img/Combined Shape.png"/>
+						</a>
+					</div>
+					<!--搜索-->
+					<div class="banner_search">
+						<input type="text" placeholder="请输入非遗相关内容" id="Text"/>
+						<input type="image" src="links/img/sousuo.png"/>
+					</div>
+				</div>
+
+
+
+
+				<!--搜索-->
+				<div class="box_search" id="box_search">
+					<div class="search">
+						<a href="javascript:;" id="banner_had">
+							<img src="assets/images/geng.png"/>
+						</a>
+						<input type="text" placeholder="请输入非遗相关内容" id="search_text"/>
+						<input type="image" src="assets/images/sou.png" id="sou"/>
+					</div>
+					<div class='search_content' id="search_content">
+						<ul>
+							<li><a href="javascript:;">苏绣</a></li>
+							<li><a href="javascript:;">景泰蓝</a></li>
+							<li><a href="javascript:;">铜艺</a></li>
+							<li><a href="javascript:;">姚慧芬</a></li>
+							<li><a href="javascript:;">朱炳仁</a></li>
+							<li><a href="javascript:;">张同禄</a></li>
+						</ul>
+					</div>
+
+
+
+					<!--搜索内容-->
+					<div id="sou_content" class="sou_content">
+						<ul id="forma_pics">
+
+						</ul>
+					</div>
+
+
+					<!--分类栏-->
+					<div class="list_menu" id="list_menu">
+						<ul>
+							<li>
+								<h3>类型</h3>
+								<span class="list_menu_span">项目</span>
+							</li>
+							<li><a href="javascript:;">项目</a></li>
+							<li><a href="javascript:;">传承人</a></li>
+							<li><a href="javascript:;">作品</a></li>
+							<li>
+								<h3>类别</h3>
+								<span class="list_menu_span">有关自然界和宇宙的知识和实践</span>
+							</li>
+							<li>
+								<a href="javascript:;">表演艺术</a>
+								<span><img src="links/img/Get.png"/></span>
+							</li>
+							<li>
+								<a href="javascript:;">口头传说和表述</a>
+								<span><img src="links/img/Get.png"/></span>
+							</li>
+							<li>
+								<a href="javascript:;">社会风俗、礼仪、节庆</a>
+								<span><img src="links/img/Get.png"/></span>
+							</li>
+							<li>
+								<a href="javascript:;">有关自然界和宇宙的知识和实践</a>
+								<span><img src="links/img/Get.png"/></span>
+							</li>
+							<li>
+								<a href="javascript:;">传统的手工艺技能</a>
+								<span><img src="links/img/Get.png"/></span>
+							</li>
+							<li>
+								<h3>地域</h3>
+								<span class="list_menu_span">中国江苏</span>
+							</li>
+							<li>
+								<a href="javascript:;">中国</a>
+								<span><img src="links/img/Get.png"/></span>
+							</li>
+							<li>
+								<a href="javascript:;">其他国家</a>
+								<span><img src="links/img/Get.png"/></span>
+							</li>
+							<div id="list_menu_input">
+								<input type="reset" name="" id="" value="重置" />
+								<input type="button" name="" id="" value="确定" class="inp"/>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		<!--小功能-->
+		<div id="gong"></div>
+		<!--分页-->
+		<div class="paging" id="paging">
+			<span id="thisPage"></span><span>/</span><span id="page"></span>
+		</div>
+
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+
+
+//$('#sou').click(function(){
+//	$('#search_content').css('display','none');
+//	$('#sou_content').css('display','block');
+//	var val = $('#search_text').val();
+////	console.log(val);
+//	var condition = {'keyword': val ,"offset":0,"limit":6};
+////	console.log(condition)
+//
+//	$.ajax({
+//
+//		type:'post',
+//
+//		url:'http://diich.efeiyi.com/search',
+//
+//		data:{
+//			'condition':JSON.stringify(condition)
+//		},
+//		dataType:'json',
+//
+//		success:function(obj){
+//
+//			console.log("-------",obj);
+//			var str ='<ul id="forma_pics">';
+//
+////			$.each(obj.data, function(i, v) {
+////				console.log(" ------- >>>>>",i, v)
+////			})
+//
+//			var str = '<ul>';
+//			for(var i = 0; i < obj.data.length; i++){
+//				str+='<li>';
+//
+////				console.log( '__________',obj.data[i].contentFragmentList);
+//				for(var j = 0; j<obj.data[i].contentFragmentList.length;j++){
+////				console.log('_____________',obj.data[i].contentFragmentList[j].content);
+//					var attrId = obj.data[i].contentFragmentList[j].attributeId;
+//					var attrCon = obj.data[i].contentFragmentList[j].content;
+////					console.log(attrId,'----------------',attrCon);
+//					if(attrId == 112){
+//						str+='<div class="forma_imaGes" style="background: url(http://resource.efeiyi.com/image/project/'+attrCon+'?x-oss-process=style/search-result-list-image); background-size:100% 100% ;">';
+//
+//					}
+//					if(attrId == 9){
+//						var strP = '<p>'+attrCon+'</p>';
+//						str+= strP + "<div>";
+//						console.log(strP);
+//					}
+//
+//
+//
+//
+//				}
+//				str+='</li>';
+//			}
+//			str+='</ul>';
+//			console.log("str ---- >", str)
+////			$('#sou_content').append(str);
+//
+//		}, error: function(error){
+//
+//         alert('数据找不到');
+//
+//     }
+//
+//	});
+//})
+
+
+
+require(["search/search"], function (searchObj) {
+	searchObj.init();
+})
+
+
+
+</script>

@@ -16,17 +16,7 @@
 		<meta name="description" content="...." />
 		<link rel="stylesheet" type="text/css" href="links/js/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="links/css/home.css"/>
-		<script type="text/javascript">
-        	(function(doc){
-				function changeSize(){
-					var size=doc.documentElement.clientWidth/320*20;
-					doc.querySelector('html').style.fontSize=size+'px';
-				}
-				//用户缩放浏览器窗口大小时
-				window.onresize=changeSize;
-				changeSize();
-			})(document);
-        </script>
+		<script src="links/js/rem.js" type="text/javascript" charset="utf-8"></script>
         <script src="links/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="assets/js/Menu2.js" type="text/javascript" charset="utf-8"></script>
         <link rel="stylesheet" type="text/css" href="links/swiper/css/swiper.min.css"/>
@@ -39,8 +29,8 @@
 	<body>
 		<div class="box" id="box">
 			<!--上导航-->
-			<div class="box_header">
-				<header>
+			<div class="box_header" id="box_header">
+				<!--<header>
 					<a href="javascript:;" class="left">
 						<img src="assets/images/retuen.jpg"/>
 						<span>返回</span>
@@ -51,7 +41,7 @@
 					<a href="javascript:;" class="right">
 						<img src="assets/images/More.png"/>
 					</a>
-				</header>
+				</header>-->
 			</div>
 			
 			<!--分类-->
@@ -105,41 +95,21 @@
 			
 			<!--内容信息-->
 			<div class="content" id="content">
-				
+				<!--banner-->
 				<div class="banner" id="banner">
 					<div class="swiper-container">
 					    <div class="swiper-wrapper">
 					        <div class="swiper-slide swiper-no-swiping">
 					        	<img src="assets/images/banner.png"/>
-					        	<span>aaaaaaaaaaaaa</span>
 					        </div>
 					        <div class="swiper-slide swiper-no-swiping">
 					        	<img src="assets/images/banner1.jpg"/>
-					        	<span>bbbbbbbbbbbbbb</span>
 					        </div>
 					        <div class="swiper-slide swiper-no-swiping">
 					        	<img src="assets/images/Bitmap2.png"/>
-					        	<span>ccccccccccccccc</span>
 					        </div>	
 					    </div>
 					</div>
-					<!--<ul>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/images/banner.png"/>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/images/banner.png"/>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/images/banner.png"/>
-							</a>
-						</li>
-					</ul>-->
 					<!--logo-->
 					<div class="banner_logo">
 						<a href="javascript:;">
@@ -157,11 +127,11 @@
 									<span>传统手工艺技能</span>
 								</a>
 					        	<a href="javascript:;">
-						        	<img src="assets/iocn/Bitmap Copy 2.png"/>
+						        	<img src="assets/iocn/Bitmap.png"/>
 									<span>传统手工艺技能</span>
 								</a>
 					        	<a href="javascript:;">
-						        	<img src="assets/iocn/Bitmap Copy 2.png"/>
+						        	<img src="links/img/Group 4.png"/>
 									<span>传统手工艺技能</span>
 								</a>
 					        </div>
@@ -171,56 +141,14 @@
 									<span>传统手工艺技能</span>
 								</a>
 					        	<a href="javascript:;">
-						        	<img src="assets/iocn/Bitmap Copy 2.png"/>
+						        	<img src="links/img/Group 4.png"/>
 									<span>传统手工艺技能</span>
 								</a>
 					        </div>	
 					    </div>
+					    <!--分页-->
 					    <div class="swiper-pagination"></div>
 					</div>
-					<!--<ul id="pice">
-						<li>
-							<a href="javascript:;">
-								<img src="assets/iocn/Bitmap Copy 2.png"/>
-								<span>传统手工艺技能</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/iocn/Bitmap.png"/>
-								<span>社会风俗礼仪</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/iocn/Bitmap Copy 2.png"/>
-								<span>传统手工艺技能</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/iocn/Bitmap.png"/>
-								<span>社会风俗礼仪</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/iocn/Bitmap Copy 2.png"/>
-								<span>传统手工艺技能</span>
-							</a>
-						</li>
-						<li>
-							<a href="javascript:;">
-								<img src="assets/iocn/Bitmap.png"/>
-								<span>社会风俗礼仪</span>
-							</a>
-						</li>
-						
-					</ul>-->
-					<!--<p class="bar" id="bar">
-						<span class="bar_blue"></span>
-						<span></span>
-					</p>-->
 				</div>
 				<!--信息-->
 				<div class="forma">
@@ -327,164 +255,13 @@
 				</div>				
 			</div>
 			
+			<!--小功能-->
+			<div id="gong"></div>
 			
-			<!--目录-->
-			<div class="menu" id="menu">
-				<a href="javscript:;">
-					<img src="assets/iocn/copy.png"/>
-				</a>
-			</div>
-			<!--目录显示-->
-			<div class="Catalog" id="Catalog">
-				<h4>目录</h4>
-				<ul id="Catalog_list">
-					<li class="li1" id="li1"><a href="javascript:;">代表传成人</a></li>
-					<li><a href="javascript:;">基本信息</a></li>
-					<li><a href="javascript:;">基本内容</a></li>
-					<li><a href="javascript:;">代表性作品</a></li>
-					<li><a href="javascript:;">历史渊源</a></li>
-					<li><a href="javascript:;">基本特性</a></li>
-				</ul>
-			</div>
-			<!--返回顶部-->
-			<div class="Return" id="Return">
-				<a href="javascript:;">
-					<img src="assets/iocn/Return.png"/>
-				</a>
-			</div>
-			<!--添加-->
-			<div class="add">
-				<a href="javscript:;">
-					<img src="assets/iocn/add.png"/>
-				</a>
-			</div>
-			
-			
-			<!--遮盖层-->
-			<div class="cover" id="cover"></div>
-			
-			<!--搜索-->
-			<div class="box_search" id="box_search">
-				<div class="search">
-					<a href="javascript:;" id="banner_had">
-						<img src="assets/images/geng.png"/>
-					</a>
-					<input type="text" placeholder="请输入非遗相关内容" id="search_text"/>
-					<input type="image" src="assets/images/sou.png" id="sou"/>
-				</div>
-				<div class='search_content'>
-					<ul>
-						<li><a href="javascript:;">苏绣</a></li>
-						<li><a href="javascript:;">景泰蓝</a></li>
-						<li><a href="javascript:;">铜艺</a></li>
-						<li><a href="javascript:;">姚慧芬</a></li>
-						<li><a href="javascript:;">朱炳仁</a></li>
-						<li><a href="javascript:;">张同禄</a></li>
-					</ul>
-				</div>
-				<!--分类栏-->
-				<div class="list_menu" id="list_menu">
-					<ul>
-						<li>
-							<h3>类型</h3>
-							<span class="list_menu_span">项目</span>
-						</li>
-						<li><a href="javascript:;">项目</a></li>
-						<li><a href="javascript:;">传承人</a></li>
-						<li><a href="javascript:;">作品</a></li>
-						<li>
-							<h3>类别</h3>
-							<span class="list_menu_span">有关自然界和宇宙的知识和实践</span>
-						</li>
-						<li>
-							<a href="javascript:;">表演艺术</a>
-							<span><img src="links/img/Get.png"/></span>
-						</li>
-						<li>
-							<a href="javascript:;">口头传说和表述</a>
-							<span><img src="links/img/Get.png"/></span>
-						</li>
-						<li>
-							<a href="javascript:;">社会风俗、礼仪、节庆</a>
-							<span><img src="links/img/Get.png"/></span>
-						</li>
-						<li>
-							<a href="javascript:;">有关自然界和宇宙的知识和实践</a>
-							<span><img src="links/img/Get.png"/></span>
-						</li>
-						<li>
-							<a href="javascript:;">传统的手工艺技能</a>
-							<span><img src="links/img/Get.png"/></span>
-						</li>
-						<li>
-							<h3>地域</h3>
-							<span class="list_menu_span">中国江苏</span>
-						</li>
-						<li>
-							<a href="javascript:;">中国</a>
-							<span><img src="links/img/Get.png"/></span>
-						</li>
-						<li>
-							<a href="javascript:;">其他国家</a>
-							<span><img src="links/img/Get.png"/></span>
-						</li>
-						<div id="list_menu_input">
-							<input type="reset" name="" id="" value="重置" />
-							<input type="button" name="" id="" value="确定" class="inp"/>
-						</div>
-					</ul>
-				</div>
-			</div>
 		
 			
 			
 		</div>
 	</body>
 </html>
-<!--<script src="links/js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="assets/js/zeptoSlide.js" type="text/javascript" charset="utf-8"></script>-->
-<script type="text/javascript">
-	
-	
-$('#sou').click(function(){
-	
-	var val = $('#search_text').val();
-	console.log(val);
-	var condition = {'keyword': val ,"offset":0,"limit":6};
-	console.log(condition)
-
-	$.ajax({
-		
-		type:'post',
-		
-		url:'http://diich.efeiyi.com/search',
-		
-		data:{
-			'condition':JSON.stringify(condition)
-		},
-		dataType:'json', 
-		
-		success:function(obj){
-			
-			console.log(obj);
-			var str = '';
-			for(var i in obj.data){
-				console.log(obj.data[i].contentFragmentList);
-				for(var j in obj.data[i].contentFragmentList){
-					console.log(obj.data[i].contentFragmentList[j].content)
-				}
-			}
-			
-		}, error: function(error){
-			
-           alert('数据找不到');
-
-       }
-	});
-})	
-
-
-
-	
-</script>
 

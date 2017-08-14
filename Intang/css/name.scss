@@ -35,8 +35,6 @@ html,body,.box{
         text-align: center;
         padding-top: 0.5rem;
         @include pos(fixed);
-        left: 0;
-        top: 0;
         z-index: 999;
             .left{
                 display: block;
@@ -45,13 +43,14 @@ html,body,.box{
                 top: 0.6rem;
                 @include clearfix;
                 img{
-                    width: 0.6rem;
-                    height: 1.1rem;
+                    width: calc(1rem/2);
+                    height: calc(1.7rem/2);
                 }
                 span{
-                    font-size: 0.8rem;
+                    font-size: calc(1.5rem/2);
                     float: right;
                     margin-left: 0.3rem;
+                    margin-top: 0.1rem;
                     color: #FFFFFF;
                 }
             }
@@ -66,7 +65,7 @@ html,body,.box{
                 }
             }
             label{
-                font-size: 1rem;
+                font-size: calc(1.7rem/2);
                 color: #FFFFFF;
             }
     }
@@ -94,10 +93,10 @@ html,body,.box{
             }
             a{
                 display: block;
-                width: 0.85rem;
+                width: 0.8rem;
                 height: 0.8rem;
                 margin: 0 auto;
-                margin-top:calc(1rem/2);
+                margin-top:calc(1.5rem/2);
                 img{
                     @extend %full;
                 }
@@ -663,163 +662,108 @@ html,body,.box{
     }  
 }
 
-//目录
-.menu{
-//  display: none;
-    width: calc(3.6rem/2);
-    height: calc(3.4rem/2);
-    @include pos(fixed);
-    right: calc(2rem/2);
-    bottom: calc(9.7rem/2);
-//  bottom: calc(13.7rem/2);
-    a{
-        display: block;
-        @extend %full;
-        img{
-            @extend %full;
-        }
-    }
-}
-//目录显示
-.Catalog{
-    width: calc(25rem/2);
-    height: 100%;
-    background: #f5f6f8;
-    @include pos(fixed);
-    right: -12.5rem;
-    top: 2.3rem;
-    z-index: 9;
-    h4{
-        font-size: calc(1.5rem/2);
-        color: #1B1B1B;
-        padding: 0.9rem 0.75rem;
-    }
-    ul{
-        width: 100%;
-        li{
-            width: 100%;
-            height: 2rem;
-            padding-left: 0.75rem;
-            &.li1{
-                background: #FFFFFF;
-                a{
-                    color: #4283EB;
-                }
-            }
-            a{
-                line-height: 2rem;
-                display: block;
-                @extend %full;
-                font-size: 0.6rem;
-                color: #000000;
-            }
-        }
-    }
-}
-//返回顶部
-.Return{
-    display: none;
-    width: calc(3.6rem/2);
-    height: calc(3.4rem/2);
-    @include pos(fixed);
-    right: calc(2rem/2);
-    bottom: calc(9.7rem/2);
-    a{
-        display: block;
-        @extend %full;
-        img{
-            @extend %full;
-        }
-    }
-}
-//添加
-.add{
-    width: calc(3.6rem/2);
-    height: calc(3.4rem/2);
-    @include pos(fixed);
-    right: calc(2rem/2);
-    bottom: calc(5.7rem/2);
-    a{
-        display: block;
-        @extend %full;
-        img{
-            @extend %full;
-        }
-    }
-}
-//遮盖层
-.cover{
-    display: none;
-    width: 16rem;
-    height: 50rem;
-    opacity: 0.56;
-    background: #1B1B1B;
-    @include pos(fixed);
-    left: 0;
-    top: 0;
-    z-index: 1;
-}
-.box_search{
-    width: 16rem;
-    display: none;
-    .search{
-        width: 16rem;
-        @include pos(relative);
-        @include clearfix;
-    //  border: 1px solid;
+
+
+
+
+#gong{
+    //目录
+    .menu{
+    //  display: none;
+        width: calc(3.6rem/2);
+        height: calc(3.4rem/2);
+        @include pos(fixed);
+        right: calc(2rem/2);
+        bottom: calc(9.7rem/2);
+    //  bottom: calc(13.7rem/2);
         a{
             display: block;
-            width: 0.7rem;
-            height: 0.7rem;
-            float: left;
-            margin-left: 0.65rem;
-            margin-top: 0.75rem;
+            @extend %full;
             img{
                 @extend %full;
             }
         }
-        input[type='text']{
-            width: calc(26rem/2);
-            height: 2rem;
-            border: none;
-            outline: none;
-            background-color:transparent;
-            border-bottom: 2px solid #727272;
-            font-size: 1rem;
-            color: #000000;
-            float: left;
-            margin-left: 1rem;
-            margin-top: 0.45rem;
-        }
-        input[type='image']{
-            @include pos();
-            bottom: 0.5rem;
-            right: 0.65rem;
-            width: 0.9rem;
-            height: 0.9rem;
-            outline: none;
-        }
     }
-    .search_content{
-        width: 16rem;
-        background-color:#f5f6f8 ;
-        padding-top: 0.25rem;
-        margin-top: 0.6rem;
+    //目录显示
+    .Catalog{
+        width: calc(25rem/2);
+        height: 100%;
+        background: #f5f6f8;
+        @include pos(fixed);
+        right: -12.5rem;
+        top: 2.3rem;
+        z-index: 9;
+        h4{
+            font-size: calc(1.5rem/2);
+            color: #1B1B1B;
+            padding: 0.9rem 0.75rem;
+        }
         ul{
-            width: 16rem;
+            width: 100%;
             li{
-                width: 16rem;
+                width: 100%;
                 height: 2rem;
+                padding-left: 0.75rem;
+                &.li1{
+                    background: #FFFFFF;
+                    a{
+                        color: #4283EB;
+                    }
+                }
                 a{
+                    line-height: 2rem;
                     display: block;
                     @extend %full;
                     font-size: 0.6rem;
-                    color: #1B1B1B;
-                    line-height: 2rem;
-                    padding-left: 0.9rem;
+                    color: #000000;
                 }
             }
         }
     }
+    //返回顶部
+    .Return{
+        display: none;
+        width: calc(3.6rem/2);
+        height: calc(3.4rem/2);
+        @include pos(fixed);
+        right: calc(2rem/2);
+        bottom: calc(9.7rem/2);
+        a{
+            display: block;
+            @extend %full;
+            img{
+                @extend %full;
+            }
+        }
+    }
+    //添加
+    .add{
+        width: calc(3.6rem/2);
+        height: calc(3.4rem/2);
+        @include pos(fixed);
+        right: calc(2rem/2);
+        bottom: calc(5.7rem/2);
+        a{
+            display: block;
+            @extend %full;
+            img{
+                @extend %full;
+            }
+        }
+    }
+    //遮盖层
+    .cover{
+        display: none;
+        width: 16rem;
+        height: 50rem;
+        opacity: 0.56;
+        background: #1B1B1B;
+        @include pos(fixed);
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
 }
+
+
 

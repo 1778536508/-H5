@@ -5,7 +5,7 @@
 html {
   box-sizing: border-box; }
 
-html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu a img, .Catalog ul li a, .Return a, .Return a img, .add a, .add a img, .box_search .search a img, .box_search .search_content ul li a {
+html, body, .box, .box_list ul li a img, .content .forma .Load a, #gong .menu a, #gong .menu a img, #gong .Catalog ul li a, #gong .Return a, #gong .Return a img, #gong .add a, #gong .add a img {
   width: 100%;
   height: 100%; }
 
@@ -31,12 +31,13 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu
         clear: both;
         content: ''; }
       .box_header header .left img {
-        width: 0.6rem;
-        height: 1.1rem; }
+        width: calc(1rem/2);
+        height: calc(1.7rem/2); }
       .box_header header .left span {
-        font-size: 0.8rem;
+        font-size: calc(1.5rem/2);
         float: right;
         margin-left: 0.3rem;
+        margin-top: 0.1rem;
         color: #FFFFFF; }
     .box_header header .right {
       display: block;
@@ -47,7 +48,7 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu
         width: 1.3rem;
         height: 0.3rem; }
     .box_header header label {
-      font-size: 1rem;
+      font-size: calc(1.7rem/2);
       color: #FFFFFF; }
 
 .box_list {
@@ -71,10 +72,10 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu
         display: block; }
       .box_list ul li a {
         display: block;
-        width: 0.85rem;
+        width: 0.8rem;
         height: 0.8rem;
         margin: 0 auto;
-        margin-top: calc(1rem/2); }
+        margin-top: calc(1.5rem/2); }
       .box_list ul li a:nth-child(2) {
         display: none; }
       .box_list ul li span {
@@ -191,10 +192,10 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu
       width: 16rem; }
       .content .forma ul li {
         width: 16rem;
-        height: calc(34rem/2); }
+        height: calc(30rem/2); }
         .content .forma ul li .forma_imaGes {
           width: 16rem;
-          height: 12rem;
+          height: 10rem;
           position: relative; }
           .content .forma ul li .forma_imaGes p {
             font-size: 0.5rem;
@@ -279,45 +280,7 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu
       font-size: 0.4rem;
       color: #949494; }
 
-.menu {
-  width: calc(3.6rem/2);
-  height: calc(3.4rem/2);
-  position: fixed;
-  right: calc(2rem/2);
-  bottom: calc(9.7rem/2);
-  z-index: 9; }
-  .menu a {
-    display: block; }
-
-.Catalog {
-  width: calc(25rem/2);
-  height: 100%;
-  background: #f5f6f8;
-  position: fixed;
-  right: -12.5rem;
-  top: 2.3rem;
-  z-index: 11; }
-  .Catalog h4 {
-    font-size: calc(1.5rem/2);
-    color: #1B1B1B;
-    padding: 0.9rem 0.75rem; }
-  .Catalog ul {
-    width: 100%; }
-    .Catalog ul li {
-      width: 100%;
-      height: 2rem;
-      padding-left: 0.75rem; }
-      .Catalog ul li.li1 {
-        background: #FFFFFF; }
-        .Catalog ul li.li1 a {
-          color: #4283EB; }
-      .Catalog ul li a {
-        line-height: 2rem;
-        display: block;
-        font-size: 0.6rem;
-        color: #000000; }
-
-.Return {
+#gong .menu {
   display: none;
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
@@ -325,20 +288,55 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu
   right: calc(2rem/2);
   bottom: calc(9.7rem/2);
   z-index: 9; }
-  .Return a {
+  #gong .menu a {
     display: block; }
-
-.add {
+#gong .Catalog {
+  width: calc(25rem/2);
+  height: 100%;
+  background: #f5f6f8;
+  position: fixed;
+  right: -12.5rem;
+  top: 2.3rem;
+  z-index: 11; }
+  #gong .Catalog h4 {
+    font-size: calc(1.5rem/2);
+    color: #1B1B1B;
+    padding: 0.9rem 0.75rem; }
+  #gong .Catalog ul {
+    width: 100%; }
+    #gong .Catalog ul li {
+      width: 100%;
+      height: 2rem;
+      padding-left: 0.75rem; }
+      #gong .Catalog ul li.li1 {
+        background: #FFFFFF; }
+        #gong .Catalog ul li.li1 a {
+          color: #4283EB; }
+      #gong .Catalog ul li a {
+        line-height: 2rem;
+        display: block;
+        font-size: 0.6rem;
+        color: #000000; }
+#gong .Return {
+  display: none;
+  width: calc(3.6rem/2);
+  height: calc(3.4rem/2);
+  position: fixed;
+  right: calc(2rem/2);
+  bottom: calc(9.7rem/2);
+  z-index: 9; }
+  #gong .Return a {
+    display: block; }
+#gong .add {
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
   position: fixed;
   right: calc(2rem/2);
   bottom: calc(5.7rem/2);
   z-index: 9; }
-  .add a {
+  #gong .add a {
     display: block; }
-
-.cover {
+#gong .cover {
   display: none;
   width: 16rem;
   height: 50rem;
@@ -348,119 +346,5 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, .menu a, .menu
   left: 0;
   top: 0;
   z-index: 1; }
-
-.box_search {
-  width: 16rem;
-  display: none;
-  z-index: 999; }
-  .box_search .search {
-    width: 16rem;
-    position: relative;
-    zoom: 1; }
-    .box_search .search:after {
-      display: block;
-      clear: both;
-      content: ''; }
-    .box_search .search a {
-      display: block;
-      width: 0.7rem;
-      height: 0.7rem;
-      float: left;
-      margin-left: 0.65rem;
-      margin-top: 0.75rem; }
-    .box_search .search input[type='text'] {
-      width: calc(26rem/2);
-      height: 2rem;
-      border: none;
-      outline: none;
-      background-color: transparent;
-      border-bottom: 2px solid #727272;
-      font-size: 1rem;
-      color: #000000;
-      float: left;
-      margin-left: 1rem;
-      margin-top: 0.45rem; }
-    .box_search .search input[type='image'] {
-      position: absolute;
-      bottom: 0.5rem;
-      right: 0.65rem;
-      width: 0.9rem;
-      height: 0.9rem;
-      outline: none; }
-  .box_search .search_content {
-    width: 16rem;
-    background-color: #f5f6f8;
-    padding-top: 0.25rem;
-    margin-top: 0.6rem; }
-    .box_search .search_content ul {
-      width: 16rem; }
-      .box_search .search_content ul li {
-        width: 16rem;
-        height: 2rem;
-        overflow: hidden; }
-        .box_search .search_content ul li a {
-          display: block;
-          font-size: 0.6rem;
-          color: #1B1B1B;
-          line-height: 2rem;
-          padding-left: 0.9rem; }
-  .box_search .list_menu {
-    width: calc(25rem/2);
-    height: 100%;
-    background: #FFFFFF;
-    position: fixed;
-    right: -12.5rem;
-    top: 2.3rem;
-    z-index: 999; }
-    .box_search .list_menu ul {
-      overflow: auto;
-      width: calc(25rem/2);
-      height: calc(62.1rem/2); }
-      .box_search .list_menu ul li {
-        width: calc(16rem-0.85rem);
-        height: calc(3.75rem/2);
-        line-height: calc(3.75rem/2);
-        zoom: 1;
-        padding-left: calc(1.7rem/2);
-        padding-right: calc(1.8rem/2); }
-        .box_search .list_menu ul li:after {
-          display: block;
-          clear: both;
-          content: ''; }
-        .box_search .list_menu ul li h3 {
-          font-size: 0.8rem;
-          color: #202121;
-          float: left;
-          font-weight: 600; }
-        .box_search .list_menu ul li span {
-          font-size: 0.65rem;
-          color: #699cee;
-          float: right; }
-          .box_search .list_menu ul li span img {
-            width: calc(0.9rem/2);
-            height: calc(1.3rem/2);
-            margin-top: 0.5rem; }
-        .box_search .list_menu ul li a {
-          font-size: calc(1.2rem/2);
-          color: #4e4e4e; }
-      .box_search .list_menu ul div {
-        zoom: 1; }
-        .box_search .list_menu ul div:after {
-          display: block;
-          clear: both;
-          content: ''; }
-        .box_search .list_menu ul div input {
-          display: block;
-          outline: none;
-          border: none;
-          -webkit-flex-grow: 1;
-          background: #f5f6f8;
-          width: calc(25rem/4);
-          height: calc(3.7rem/2);
-          float: left;
-          color: #4283eb; }
-          .box_search .list_menu ul div input.inp {
-            background: #4283eb;
-            color: #FFFFFF; }
 
 /*# sourceMappingURL=home.css.map */
