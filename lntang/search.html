@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>非遗H5视觉</title>
+		<title>非遗H5视觉</title> 
 		<meta name="author" content="...">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
@@ -32,6 +32,9 @@
         <script src="templates/require/require.js" type="text/javascript" charset="utf-8"></script>
         <!--<script src="require/jquery.ba-hashchange.js" type="text/javascript" charset="utf-8"></script>-->
         <!--<script src="require/text.js" type="text/javascript" charset="utf-8"></script>-->
+        
+        <script src="http://diich.efeiyi.com/js/util.js"></script>
+		<script src="http://diich.efeiyi.com/data/category.js"></script>
 	</head>
 	<body>
 		<div class="box" id="box">
@@ -69,30 +72,9 @@
 				</ul>
 			</div>
 
-
+			
 
 			<div class="content">
-
-
-				<!--搜索-->
-				<div class="content_search" id="content_search">
-					<!--删除按钮-->
-					<div class="banner_remove" id="">
-						<a href="javascript:;">
-							<span>|</span>
-							<img src="links/img/Combined Shape.png"/>
-						</a>
-					</div>
-					<!--搜索-->
-					<div class="banner_search">
-						<input type="text" placeholder="请输入非遗相关内容" id="Text"/>
-						<input type="image" src="links/img/sousuo.png"/>
-					</div>
-				</div>
-
-
-
-
 				<!--搜索-->
 				<div class="box_search" id="box_search">
 					<div class="search">
@@ -118,63 +100,97 @@
 					<!--搜索内容-->
 					<div id="sou_content" class="sou_content">
 						<ul id="forma_pics">
-
+								
 						</ul>
+						<!--加载更多-->
+						<div class="Load">
+							<img src="assets/images/loading.gif" id="load_search_gif"/>
+						</div>
+						<p class="p_content" id="p_content">
+							没有内容了！
+						</p>
+					
 					</div>
 
 
 					<!--分类栏-->
+					<!--一级分类-->
 					<div class="list_menu" id="list_menu">
-						<ul>
-							<li>
+						<div class="list_menu_tow">
+							<div class="list_h3">
 								<h3>类型</h3>
 								<span class="list_menu_span">项目</span>
-							</li>
-							<li><a href="javascript:;">项目</a></li>
-							<li><a href="javascript:;">传承人</a></li>
-							<li><a href="javascript:;">作品</a></li>
-							<li>
+							</div>
+							<ul>
+								<li><a href="javascript:;">项目</a></li>
+								<li><a href="javascript:;">传承人</a></li>
+								<li><a href="javascript:;">作品</a></li>
+							</ul>
+							<div class="list_h3">
 								<h3>类别</h3>
-								<span class="list_menu_span">有关自然界和宇宙的知识和实践</span>
-							</li>
-							<li>
-								<a href="javascript:;">表演艺术</a>
-								<span><img src="links/img/Get.png"/></span>
-							</li>
-							<li>
-								<a href="javascript:;">口头传说和表述</a>
-								<span><img src="links/img/Get.png"/></span>
-							</li>
-							<li>
-								<a href="javascript:;">社会风俗、礼仪、节庆</a>
-								<span><img src="links/img/Get.png"/></span>
-							</li>
-							<li>
-								<a href="javascript:;">有关自然界和宇宙的知识和实践</a>
-								<span><img src="links/img/Get.png"/></span>
-							</li>
-							<li>
-								<a href="javascript:;">传统的手工艺技能</a>
-								<span><img src="links/img/Get.png"/></span>
-							</li>
-							<li>
+								<span class="list_menu_span list_menu_one"></span>
+								<span class="list_menu_tow_tow"></span>
+								<span class="list_menu_Three"></span>
+							</div>
+							<!--一级分类-->
+							<ul id="list_menu_content">
+								
+							</ul>
+							<div class="list_h3">
 								<h3>地域</h3>
 								<span class="list_menu_span">中国江苏</span>
-							</li>
-							<li>
-								<a href="javascript:;">中国</a>
-								<span><img src="links/img/Get.png"/></span>
-							</li>
-							<li>
-								<a href="javascript:;">其他国家</a>
-								<span><img src="links/img/Get.png"/></span>
-							</li>
-							<div id="list_menu_input">
-								<input type="reset" name="" id="" value="重置" />
-								<input type="button" name="" id="" value="确定" class="inp"/>
 							</div>
-						</ul>
+							<ul>
+								<li>
+									<a href="javascript:;">中国</a>
+									<span><img src="links/img/Get.png"/></span>
+								</li>
+								<li>
+									<a href="javascript:;">其他国家</a>
+									<span><img src="links/img/Get.png"/></span>
+								</li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
 					</div>
+					<div id="list_menu_input">
+						<input type="reset" name="" id="reset" value="重置" />
+						<input type="button" name="" id="btn" value="确定" class="inp"/>
+					</div>
+					
+					<!--二级分类-->
+					<div class="Two_Stage_Classification" id="Two_Stage_Classification">
+						<div class="Two_Stage_Classification_scroll">
+							<h3 id="Title" class="Title_h3"></h3>
+							<ul id="Two_Stage_Classification_Content">
+
+							</ul>
+							<div style="height: 5rem;"></div>
+						</div>
+						
+					</div>
+					<!--二级遮盖层-->
+					<div id="cover_tow"></div>
+					
+					
+					<!--三级分类-->
+					<div class="Three_Stage_Classification" id="Three_Stage_Classification">
+						<div class="Three_Stage_Classification_scroll">
+							<h3 id="Three_Title" class="Title_h3"></h3>
+							<ul id="Three_Title_Content">
+
+							</ul>
+						</div>
+						<div style="height: 5rem;"></div>
+					</div>
+					<!--三级遮盖层-->
+					<div id="cover_Three"></div>
+					
+					
+					
+					
 				</div>
 			</div>
 
@@ -190,79 +206,13 @@
 </html>
 
 <script type="text/javascript">
-
-
-//$('#sou').click(function(){
-//	$('#search_content').css('display','none');
-//	$('#sou_content').css('display','block');
-//	var val = $('#search_text').val();
-////	console.log(val);
-//	var condition = {'keyword': val ,"offset":0,"limit":6};
-////	console.log(condition)
-//
-//	$.ajax({
-//
-//		type:'post',
-//
-//		url:'http://diich.efeiyi.com/search',
-//
-//		data:{
-//			'condition':JSON.stringify(condition)
-//		},
-//		dataType:'json',
-//
-//		success:function(obj){
-//
-//			console.log("-------",obj);
-//			var str ='<ul id="forma_pics">';
-//
-////			$.each(obj.data, function(i, v) {
-////				console.log(" ------- >>>>>",i, v)
-////			})
-//
-//			var str = '<ul>';
-//			for(var i = 0; i < obj.data.length; i++){
-//				str+='<li>';
-//
-////				console.log( '__________',obj.data[i].contentFragmentList);
-//				for(var j = 0; j<obj.data[i].contentFragmentList.length;j++){
-////				console.log('_____________',obj.data[i].contentFragmentList[j].content);
-//					var attrId = obj.data[i].contentFragmentList[j].attributeId;
-//					var attrCon = obj.data[i].contentFragmentList[j].content;
-////					console.log(attrId,'----------------',attrCon);
-//					if(attrId == 112){
-//						str+='<div class="forma_imaGes" style="background: url(http://resource.efeiyi.com/image/project/'+attrCon+'?x-oss-process=style/search-result-list-image); background-size:100% 100% ;">';
-//
-//					}
-//					if(attrId == 9){
-//						var strP = '<p>'+attrCon+'</p>';
-//						str+= strP + "<div>";
-//						console.log(strP);
-//					}
-//
-//
-//
-//
-//				}
-//				str+='</li>';
-//			}
-//			str+='</ul>';
-//			console.log("str ---- >", str)
-////			$('#sou_content').append(str);
-//
-//		}, error: function(error){
-//
-//         alert('数据找不到');
-//
-//     }
-//
-//	});
-//})
-
-
+console.log(category_all);
 
 require(["search/search"], function (searchObj) {
 	searchObj.init();
+})
+require(["search/list"],function(listObj){
+	listObj.list();
 })
 
 

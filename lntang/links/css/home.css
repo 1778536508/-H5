@@ -265,8 +265,8 @@ html, body, .box, .box_list ul li a img, .content .forma .Load a, #gong .menu a,
         line-height: calc(3.2rem/2); }
       .content .forma .Load img {
         display: none;
-        width: 2rem;
-        height: 2rem;
+        width: 5rem;
+        height: 1rem;
         margin: 0 auto; }
   .content .PC {
     width: 16rem;

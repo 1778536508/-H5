@@ -15,35 +15,7 @@ $(function () {
 					'</header>';
 	$('#box_header').append(str_header);
 	
-	//list
-//	var str_list = '<ul>'+
-//					'<li class="lii" id="li1">'+
-//							'<a href="javascript:;"><img src="links/img/souye.png"/></a>'+
-//							'<a href="javascript:;"><img src="assets/images/home.png"/></a>'+
-//							'<span>首页</span>'+
-//					'</li>'+
-//					'<li id="box_list_search">'+
-//							'<a href="javascript:;"><img src="links/img/feiyiminglu.png"/></a>'+
-//							'<a href="javascript:;"><img src="assets/images/feiyi.png"/></a>'+
-//							'<span>搜索</span>'+
-//					'</li>'+
-//					'<li id="li2">'+
-//							'<a href="javascript:;"><img src="links/img/minglupass.png"/></a>'+
-//							'<a href="javascript:;"><img src="assets/images/pass.png"/></a>'+
-//							'<span>非遗名录</span>'+
-//					'</li>'+
-//					'<li id="li3">'+
-//							'<a href="javascript:;"><img src="links/img/shenbao.png"/></a>'+
-//							'<a href="javascript:;"><img src="assets/images/shenbao.png"/></a>'+
-//							'<span>我要申报</span>'+
-//					'</li>'+
-//					'<li id="li4">'+
-//							'<a href="javascript:;"><img src="links/img/Group 13.png"/></a>'+
-//							'<a href="javascript:;"><img src="assets/images/Group 13.png"/></a>'+
-//							'<span>官方服务</span>'+
-//					'</li>'+
-//				'</ul>';
-//	$('#box_list').append(str_list);
+
 
 
 	//小功能
@@ -79,7 +51,7 @@ $(function () {
 	
 	
 	
-	
+setTimeout(function(){
 	
 	//下拉菜单
 	var banner_had = $('#banner_had');
@@ -90,26 +62,30 @@ $(function () {
 	var Catalog = $('#Catalog');
 	var menu = $('#menu');
 	
+
 	
 	
-	
-	//点击分类变为高光 跳转
-//	$('#box_list').on('click','li',function(){
-//		$(this).addClass('lii').siblings().removeClass('lii');
-//	})
 
 	
 	
 	
 	
-	//显示
+	//显示进入一级分类
 	banner_had.click(function(){
 		list_menu.css({
 			'right':'0',
 			'transition':'all 0.5s'
 		})
+		$('#list_menu_input').css({
+						'right':'0',
+						'transition':'all 0.5s'
+					})
 		cover.css('display','block');
-		stop();
+		$('body').css({
+			'position':'fixed',
+			'left':'0',
+			'top':'0'
+		})
 	})
 	//隐藏
 	banner_menu_Button.click(function(){
@@ -132,7 +108,12 @@ $(function () {
 			'right':'-12.5rem',
 			'transition':'all 0.5s'
 		})
+		$('#list_menu_input').css({
+			'right':'-12.5rem',
+			'transition':'all 0.5s'
+		})
 		move();
+		$('body').css('position','');
 	})
 	
 	 $('#Catalog_list>li').click(function(){
@@ -165,20 +146,6 @@ $(function () {
 				$('#content_search').hide();
 			}
     	}
-//		var display = $('#content_search').css('display');
-//		if(display == 'none'){
-//			$('#content_search').css({
-//				'display':'block',
-//				'top':'5.05rem',
-//				'transition':'all 0.5s'
-//			});
-//		}else{
-//			$('#content_search').css({
-//				'display':'none',
-//				'top':'2.05rem',
-//				'transition':'all 0.5s'
-//			})
-//		}
 		
 	})
 	
@@ -222,12 +189,14 @@ $(function () {
 	
 	/***禁止滑动***/
 	function stop(){
+			var bo = document.getElementsByTagName('body')[0];
 	        document.body.style.overflow='hidden';        
 	        document.addEventListener("touchmove",mo,false);//禁止页面滑动
 	}
 	
 	/***取消滑动限制***/
 	function move(){
+			var bo = document.getElementsByTagName('body')[0];
 	        document.body.style.overflow='';//出现滚动条
 	        document.removeEventListener("touchmove",mo,false);        
 	}
@@ -259,7 +228,7 @@ $(function () {
 	//最多显示字数
 	var num = $('.list_menu_span');
 	for(var i =0; i<num.length; i++){
-		console.log(typeof $(num[i]).html());
+//		console.log(typeof $(num[i]).html());
 		var str = $(num[i]).html();
 		var s = str;
 		if(str.length>10){
@@ -267,6 +236,11 @@ $(function () {
 		}
 		$(num[i]).html(s);
 	}
+	
+	
+	
+	
+	
 	
 	
 	
@@ -291,7 +265,6 @@ $(function () {
 	
 	
 	//当搜索中无内容时清空搜索content    关键字显示
-	console.log($('#search_text').val())
 	if($('#search_text').val('')){
 		$('#search_content').css('display', 'block');
 		$('#sou_content').css('display', 'none');
@@ -299,10 +272,92 @@ $(function () {
 	
 	
 	
+	//点击一级分类进入二级分类
+	$('#list_menu_content').on('click','li',function(){
+		$('.list_menu_one').text($(this).text());
+		$(this).addClass('blue_one_Title').siblings().removeClass('blue_one_Title');
+		$('#cover_tow').css('display','block');
+		$('#Two_Stage_Classification').css({
+						'right':'0',
+						'transition':'all 0.5s'
+					})
+		$('#Title').text($(this).text());
+	})
+	
+	
+	//点击二级遮盖层使二级分类隐藏
+	$('#cover_tow').click(function(){
+		$('#Two_Stage_Classification').css({
+						'right':'-12.5rem',
+						'transition':'all 0.5s'
+					})
+		$('#cover_tow').css('display','none');
+	})
+	
+	
+	
+	//点击二级分类进入三级分类
+	$('#Two_Stage_Classification_Content').on('click','li',function(){
+		$(this).addClass('blue_Tow_Title').siblings().removeClass('blue_Tow_Title');
+		$('#cover_Three').css('display','block');
+		$('#Three_Stage_Classification').css({
+						'right':'0',
+						'transition':'all 0.5s'
+					})
+		$('#Three_Title').text($(this).text());
+	})
+	//点击三级遮盖层使三级分类隐藏
+	$('#cover_Three').click(function(){
+		$('#Three_Stage_Classification').css({
+						'right':'-12.5rem',
+						'transition':'all 0.5s'
+					})
+		$('#cover_Three').css('display','none');
+	})
+	
+	$('#Three_Title_Content').on('click','li',function(){
+		$(this).addClass('blue_Three_Title').siblings().removeClass('blue_Three_Title');
+	})
 	
 	
 	
 	
+	
+	//确定
+	$('#btn').click(function(){
+		$('body').css('position','');
+		move();
+		//三级分类隐藏
+		$('#Three_Stage_Classification').css({
+						'right':'-12.5rem',
+						'transition':'all 0.5s'
+					})
+		//三级遮盖层隐藏
+		$('#cover_Three').css('display','none');
+		
+		//二级分类隐藏
+		$('#Two_Stage_Classification').css({
+						'right':'-12.5rem',
+						'transition':'all 0.5s'
+					})
+		//二级分类隐藏
+		$('#cover_tow').css('display','none');
+		
+		//一级分类隐藏
+		list_menu.css({
+			'right':'-12.5rem',
+			'transition':'all 0.5s'
+		})
+		//一级遮盖层隐藏		
+		cover.css('display','none');
+		
+		//自己隐藏
+		$('#list_menu_input').css({
+				'right':'-12.5rem',
+				'transition':'all 0.5s'
+			})
+	})
+},20)
 	
 	
 	

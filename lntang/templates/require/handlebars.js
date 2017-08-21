@@ -1,6 +1,6 @@
 /*
 
- Copyright (C) 2011 by Yehuda Katz
+ Copyright (C) 2011 by Yehuda Katz 
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -2731,41 +2731,35 @@ Handlebars.template = Handlebars.VM.template;
             return options.inverse(this);
         }
     })
-	
-	
-	
-	
-	
-	
-	
-	
-	//获取数据后的js思想   封装的方法		要获取的变量			keys数据     id值
+
+
+
+
+
+
+
+
+	//获取数据后的js   封装的方法		要获取的变量			keys数据     id值
 	Handlebars.registerHelper("getContent", function(keys, id) {
-//		console.log(keys, id);
+			
 		//定义一个变量
 		var content = "";
-
-		var _url ='assets/images/headsmall.png';
-		
-
+		var _url ='assets/images/headsmall.png';	
         //jq循环数据
 		$.each(keys, function(i, val) {
-			
+//			console.log(val)
 			//如果数据中的id==我要获取的id
-			if(val.attributeId == id) {	
+			if(val.attributeId == id) {
 				//就将content中的数据放到变量里
 				content = val.content;
 				//必须要返回    否则会一直循环下去
 				return;
-			} 
-
-
+			}
 		})
 		if(id == 112) {
 			 content = content ? 'http://resource.efeiyi.com/image/project/' + content + '?x-oss-process=style/search-result-list-image' : _url;
-			return content; 
-		}
-
+			return content;
+		}	
 		//最后返回数据变量
 		return content;
 	})
@@ -2773,5 +2767,13 @@ Handlebars.template = Handlebars.VM.template;
 	
 	
 	
+
+
+
+
+
+
+
+
 })();
 ;
