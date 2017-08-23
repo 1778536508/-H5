@@ -332,6 +332,10 @@ html, body, .box, .box_list ul li a img, .content .box_search .search a img, .co
               display: block;
               clear: both;
               content: ''; }
+            .content .box_search .list_menu .list_menu_tow ul li.type a {
+              color: #6399ef; }
+            .content .box_search .list_menu .list_menu_tow ul li.blue_reg a {
+              color: #6399ef; }
             .content .box_search .list_menu .list_menu_tow ul li.blue_one_Title a {
               color: #6399ef; }
             .content .box_search .list_menu .list_menu_tow ul li span {

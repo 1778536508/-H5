@@ -2759,7 +2759,11 @@ Handlebars.template = Handlebars.VM.template;
 		if(id == 112) {
 			 content = content ? 'http://resource.efeiyi.com/image/project/' + content + '?x-oss-process=style/search-result-list-image' : _url;
 			return content;
-		}	
+		}
+		if(id == 113) {
+			content = content ? 'http://resource.efeiyi.com/image/master/' + content + '?x-oss-process=style/search-result-list-image' : _url;
+			return content;
+		}
 		//最后返回数据变量
 		return content;
 	})

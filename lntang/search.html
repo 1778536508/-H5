@@ -35,6 +35,7 @@
         
         <script src="http://diich.efeiyi.com/js/util.js"></script>
 		<script src="http://diich.efeiyi.com/data/category.js"></script>
+		<script src="http://diich.efeiyi.com/js/citys.js"></script>
 	</head>
 	<body>
 		<div class="box" id="box">
@@ -119,16 +120,17 @@
 						<div class="list_menu_tow">
 							<div class="list_h3">
 								<h3>类型</h3>
-								<span class="list_menu_span">项目</span>
+								<span class="list_menu_span" id="list_menu_span">全部</span>
 							</div>
-							<ul>
-								<li><a href="javascript:;">项目</a></li>
-								<li><a href="javascript:;">传承人</a></li>
-								<li><a href="javascript:;">作品</a></li>
+							<ul id="list_type">
+								<li data-id="null" class="type"><a href="javascript:;">全部</a></li>
+								<li data-id="0"><a href="javascript:;">项目</a></li>
+								<li data-id="1"><a href="javascript:;">传承人</a></li>
+								<li data-id="3"><a href="javascript:;">作品</a></li>
 							</ul>
 							<div class="list_h3">
 								<h3>类别</h3>
-								<span class="list_menu_span list_menu_one"></span>
+								<span class="list_menu_span list_menu_one">所有分类</span>
 								<span class="list_menu_tow_tow"></span>
 								<span class="list_menu_Three"></span>
 							</div>
@@ -138,21 +140,13 @@
 							</ul>
 							<div class="list_h3">
 								<h3>地域</h3>
-								<span class="list_menu_span">中国江苏</span>
+								<span class="list_menu_span" id="list_menu_region">全球</span>
 							</div>
-							<ul>
-								<li>
-									<a href="javascript:;">中国</a>
-									<span><img src="links/img/Get.png"/></span>
-								</li>
-								<li>
-									<a href="javascript:;">其他国家</a>
-									<span><img src="links/img/Get.png"/></span>
-								</li>
-								<li></li>
-								<li></li>
-								<li></li>
+							<!--地域    一级分类-->
+							<ul id="list_reg">
+								
 							</ul>
+							<div style="height: 4.5rem;"></div>
 						</div>
 					</div>
 					<div id="list_menu_input">
@@ -206,14 +200,28 @@
 </html>
 
 <script type="text/javascript">
-console.log(category_all);
 
+
+//content Search
 require(["search/search"], function (searchObj) {
 	searchObj.init();
 })
+//content List
+console.log(category_all);
 require(["search/list"],function(listObj){
 	listObj.list();
 })
+
+//content Region
+console.log(dic_arr_city);
+require(["search/region"],function(regionObj){
+	regionObj.reg();
+})
+
+//content type
+//require(["search/type"], function (typeObj) {
+//	typeObj.type();
+//})
 
 
 

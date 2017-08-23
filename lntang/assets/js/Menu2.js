@@ -57,14 +57,29 @@ setTimeout(function(){
 	var banner_had = $('#banner_had');
 	var list_menu = $('#list_menu');
 	var cover = $('#cover');
-	var banner_menu_Button = $('#banner_menu_Button');
+//	var banner_menu_Button = $('#banner_menu_Button');
 	var box = $('#box');
 	var Catalog = $('#Catalog');
 	var menu = $('#menu');
 	
 
-	
-	
+	//隐藏
+	function typeHide(){
+		//一级分类
+		list_menu.css({
+			'right':'-12.5rem',
+			'transition':'all 0.5s'
+		})
+		//一级遮盖层
+		cover.css('display','none');
+		//确认重置按钮
+		$('#list_menu_input').css({
+			'right':'-12.5rem',
+			'transition':'all 0.5s'
+		})
+		//解除禁止滑动
+		$('body').css('position','');
+	}
 
 	
 	
@@ -88,32 +103,22 @@ setTimeout(function(){
 		})
 	})
 	//隐藏
-	banner_menu_Button.click(function(){
-		alert(123)
-		list_menu.css({
-			'right':'-12.5rem',
-			'transition':'all 0.5s'
-		})
-		cover.css('display','none');
-		move();
-	})
+//	banner_menu_Button.click(function(){
+//		alert(123)
+//		list_menu.css({
+//			'right':'-12.5rem',
+//			'transition':'all 0.5s'
+//		})
+//		cover.css('display','none');
+//		move();
+//	})
 	//点击其他部分隐藏
 	cover.click(function(){
-		list_menu.css({
-			'right':'-12.5rem',
-			'transition':'all 0.5s'
-		})
-		cover.css('display','none');
 		Catalog.css({
 			'right':'-12.5rem',
 			'transition':'all 0.5s'
 		})
-		$('#list_menu_input').css({
-			'right':'-12.5rem',
-			'transition':'all 0.5s'
-		})
-		move();
-		$('body').css('position','');
+		typeHide();
 	})
 	
 	 $('#Catalog_list>li').click(function(){
@@ -239,31 +244,18 @@ setTimeout(function(){
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	//搜索关键字添加
 	$('#search_content').on('click','a',function(){
 		$('#search_text').val($(this).html());
 	})
 	
-	
-	
-	
+
 	//点击申报跳转
 	$('#declare').click(function(){
 		location.href = 'declare.html'
 	})
-	
-	
-	
-	
-	
-	
+
+
 	//当搜索中无内容时清空搜索content    关键字显示
 	if($('#search_text').val('')){
 		$('#search_content').css('display', 'block');
@@ -272,21 +264,29 @@ setTimeout(function(){
 	
 	
 	
-	//点击一级分类进入二级分类
-	$('#list_menu_content').on('click','li',function(){
-		$('.list_menu_one').text($(this).text());
-		$(this).addClass('blue_one_Title').siblings().removeClass('blue_one_Title');
-		$('#cover_tow').css('display','block');
-		$('#Two_Stage_Classification').css({
-						'right':'0',
-						'transition':'all 0.5s'
-					})
-		$('#Title').text($(this).text());
+	//类型
+	$('#list_type').on('click','li',function(){
+		$(this).addClass('type').siblings().removeClass('type');
+		$('#list_menu_span').text($(this).children('a').text());
+		typeHide();
 	})
+	
+	
+	//类别	
+	
+	//点击一级分类进入二级分类
+//	$('#list_menu_content').on('click','li',function(){
+//		
+//		$(this).addClass('blue_one_Title').siblings().removeClass('blue_one_Title');
+//		$('.list_menu_one').text($(this).text());
+//		$('#Title').text($(this).text());
+//		show1();
+//	})
 	
 	
 	//点击二级遮盖层使二级分类隐藏
 	$('#cover_tow').click(function(){
+		$('#Two_Stage_Classification_Content').html('');
 		$('#Two_Stage_Classification').css({
 						'right':'-12.5rem',
 						'transition':'all 0.5s'
@@ -297,17 +297,14 @@ setTimeout(function(){
 	
 	
 	//点击二级分类进入三级分类
-	$('#Two_Stage_Classification_Content').on('click','li',function(){
-		$(this).addClass('blue_Tow_Title').siblings().removeClass('blue_Tow_Title');
-		$('#cover_Three').css('display','block');
-		$('#Three_Stage_Classification').css({
-						'right':'0',
-						'transition':'all 0.5s'
-					})
-		$('#Three_Title').text($(this).text());
-	})
+//	$('#Two_Stage_Classification_Content').on('click','li',function(){
+//		$(this).addClass('blue_Tow_Title').siblings().removeClass('blue_Tow_Title');
+//		$('#Three_Title').text($(this).text());
+//		show2();
+//	})
 	//点击三级遮盖层使三级分类隐藏
 	$('#cover_Three').click(function(){
+		$('#Three_Title_Content').html('');
 		$('#Three_Stage_Classification').css({
 						'right':'-12.5rem',
 						'transition':'all 0.5s'
@@ -356,7 +353,45 @@ setTimeout(function(){
 				'right':'-12.5rem',
 				'transition':'all 0.5s'
 			})
-	})
+	});
+	
+	
+	
+	//地域
+//	$('#list_reg').on("click","li",function(){
+//		$('.list_menu_one').text($(this).text());
+//		$('#Title').text($(this).text());
+//		$(this).addClass('blue_reg').siblings().removeClass('blue_reg');
+//		show1();
+//	})
+
+	
+		
+		
+		
+		
+	
+	
+	//显示
+	function show1(){
+		$('#cover_tow').css('display','block');
+		$('#Two_Stage_Classification').css({
+						'right':'0',
+						'transition':'all 0.5s'
+		})
+	}
+	function show2(){
+		$('#cover_Three').css('display','block');
+		$('#Three_Stage_Classification').css({
+						'right':'0',
+						'transition':'all 0.5s'
+					})
+	}
+	//隐藏
+	
+	
+	
+	
 },20)
 	
 	

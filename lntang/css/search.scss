@@ -418,6 +418,16 @@ html,body,.box{
                         @include clearfix;
                         padding-left: calc(1.7rem/2);
                         padding-right: calc(1.8rem/2);
+                        &.type{
+                            a{
+                                color: #6399ef;
+                            }
+                        }
+                        &.blue_reg{
+                            a{
+                                color: #6399ef;
+                            }
+                        }
                         &.blue_one_Title{
                             a{
                                 color: #6399ef;
