@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>非遗H5视觉</title> 
+		<meta name="author" content="...">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <meta name="author" content="....">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Pragma" content="no-cache">
+		<meta name="description" content="...." />
+
+		<link rel="stylesheet" type="text/css" href="links/js/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/search.css"/>
+
+		<script src="links/js/rem.js" type="text/javascript" charset="utf-8"></script>
+        <script src="links/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="assets/js/Menu2.js" type="text/javascript" charset="utf-8"></script>
+
+        <link rel="stylesheet" type="text/css" href="links/swiper/css/swiper.min.css"/>
+        <script src="links/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="assets/js/banner.js" type="text/javascript" charset="utf-8"></script>
+        <script src="assets/js/scrollBar.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="templates/require/handlebars.js" type="text/javascript" charset="utf-8"></script>
+        <script src="templates/require/require.js" type="text/javascript" charset="utf-8"></script>
+        <!--<script src="require/jquery.ba-hashchange.js" type="text/javascript" charset="utf-8"></script>-->
+        <!--<script src="require/text.js" type="text/javascript" charset="utf-8"></script>-->
+        
+        <script src="http://diich.efeiyi.com/js/util.js"></script>
+		<script src="http://diich.efeiyi.com/data/category.js"></script>
+		<script src="http://diich.efeiyi.com/js/citys.js"></script>
+	</head>
+	<body>
+		<div class="box" id="box">
+			<!--上导航-->
+			<div class="box_header" id="box_header"></div>
+
+			<!--分类-->
+			<div class="box_list" id="box_list">
+				<ul>
+					<li id="li1">
+							<a href="javascript:;"><img src="links/img/souye.png"/></a>
+							<a href="javascript:;"><img src="assets/images/home.png"/></a>
+							<span>首页</span>
+					</li>
+					<li id="box_list_search" class="lii">
+							<a href="javascript:;"><img src="links/img/feiyiminglu.png"/></a>
+							<a href="javascript:;"><img src="assets/images/feiyi.png"/></a>
+							<span>搜索</span>
+					</li>
+					<li id="li2">
+							<a href="javascript:;"><img src="links/img/minglupass.png"/></a>
+							<a href="javascript:;"><img src="assets/images/pass.png"/></a>
+							<span>非遗名录</span>
+					</li>
+					<li id="li3">
+							<a href="javascript:;"><img src="links/img/shenbao.png"/></a>
+							<a href="javascript:;"><img src="assets/images/shenbao.png"/></a>
+							<span>我要申报</span>
+					</li>
+					<li id="li4">
+							<a href="javascript:;"><img src="links/img/Group 13.png"/></a>
+							<a href="javascript:;"><img src="assets/images/Group 13.png"/></a>
+							<span>官方服务</span>
+					</li>
+				</ul>
+			</div>
+
+			
+
+			<div class="content">
+				<!--搜索-->
+				<div class="box_search" id="box_search">
+					<div class="search">
+						<a href="javascript:;" id="banner_had">
+							<img src="assets/images/geng.png"/>
+						</a>
+						<input type="text" placeholder="请输入非遗相关内容" id="search_text"/>
+						<input type="image" src="assets/images/sou.png" id="sou"/>
+					</div>
+					<div class='search_content' id="search_content">
+						<ul>
+							<li><a href="javascript:;">苏绣</a></li>
+							<li><a href="javascript:;">景泰蓝</a></li>
+							<li><a href="javascript:;">铜艺</a></li>
+							<li><a href="javascript:;">姚慧芬</a></li>
+							<li><a href="javascript:;">朱炳仁</a></li>
+							<li><a href="javascript:;">张同禄</a></li>
+						</ul>
+					</div>
+
+
+
+					<!--搜索内容-->
+					<div id="sou_content" class="sou_content">
+						<ul id="forma_pics">
+								
+						</ul>
+						<!--加载更多-->
+						<div class="Load">
+							<img src="assets/images/loading.gif" id="load_search_gif"/>
+						</div>
+						<p class="p_content" id="p_content">
+							没有内容了！
+						</p>
+						<div id="Load_none">
+							<img src="assets/images/Load_sya.gif"/>
+						</div>
+					
+					</div>
+
+
+					<!--分类栏-->
+					<!--一级分类-->
+					<div class="list_menu" id="list_menu">
+						<div class="list_menu_tow">
+							<div class="list_h3">
+								<h3>类型</h3>
+								<span class="list_menu_span" id="list_menu_span">全部</span>
+							</div>
+							<ul id="list_type">
+								<li data-id="null" class="type"><a href="javascript:;">全部</a></li>
+								<li data-id="0"><a href="javascript:;">项目</a></li>
+								<li data-id="1"><a href="javascript:;">传承人</a></li>
+								<li data-id="3"><a href="javascript:;">作品</a></li>
+							</ul>
+							<div class="list_h3">
+								<h3>类别</h3>
+								<span class="list_menu_span list_menu_one">所有分类</span>
+								<span class="list_menu_tow_tow"></span>
+								<span class="list_menu_Three"></span>
+							</div>
+							<!--一级分类-->
+							<ul id="list_menu_content">
+								
+							</ul>
+							<div class="list_h3">
+								<h3>地域</h3>
+								<span class="list_menu_span" id="list_menu_region">全球</span>
+							</div>
+							<!--地域    一级分类-->
+							<ul id="list_reg">
+								
+							</ul>
+							<div style="height: 4.5rem;"></div>
+						</div>
+					</div>
+					<div id="list_menu_input">
+						<input type="reset" name="" id="reset" value="重置" />
+						<input type="button" name="" id="btn" value="确定" class="inp"/>
+					</div>
+					
+					<!--二级分类-->
+					<div class="Two_Stage_Classification" id="Two_Stage_Classification">
+						<div class="Two_Stage_Classification_scroll">
+							<h3 id="Title" class="Title_h3"></h3>
+							<ul id="Two_Stage_Classification_Content">
+
+							</ul>
+							<div style="height: 5rem;"></div>
+						</div>
+						
+					</div>
+					<!--二级遮盖层-->
+					<div id="cover_tow"></div>
+					
+					
+					<!--三级分类-->
+					<div class="Three_Stage_Classification" id="Three_Stage_Classification">
+						<div class="Three_Stage_Classification_scroll">
+							<h3 id="Three_Title" class="Title_h3"></h3>
+							<ul id="Three_Title_Content">
+
+							</ul>
+						</div>
+						<div style="height: 5rem;"></div>
+					</div>
+					<!--三级遮盖层-->
+					<div id="cover_Three"></div>
+					
+					
+					
+					
+				</div>
+			</div>
+
+		<!--小功能-->
+		<div id="gong"></div>
+		<!--分页-->
+		<div class="paging" id="paging">
+			<span id="thisPage"></span><span>/</span><span id="page"></span>
+		</div>
+
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+
+
+//content Search
+require(["search/search"], function (searchObj) {
+	searchObj.init();
+})
+//content List
+console.log(category_all);
+require(["search/list"],function(listObj){
+	listObj.list();
+})
+
+//content Region
+console.log(dic_arr_city);
+require(["search/region"],function(regionObj){
+	regionObj.reg();
+})
+
+//content type
+//require(["search/type"], function (typeObj) {
+//	typeObj.type();
+//})
+
+
+
+</script>

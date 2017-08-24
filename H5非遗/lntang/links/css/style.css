@@ -1,0 +1,51 @@
+
+
+    .heart {
+	    background: url(../../assets/images/web_heart_animation.gif);
+	    background-position: left;
+	    background-repeat: no-repeat;
+	    height: calc(6rem/2);
+	    width: calc(6rem/2);
+	    position: absolute;
+	    left: calc(-4.2rem/2);
+    	top: calc(-2.3rem/2);
+        background-size:2900%;
+    }
+    .heart:hover, .heart:focus{
+    background-position: right;
+	}
+
+    @-webkit-keyframes heartBlast {
+    0% {
+	    background-position: left;
+	}
+	100% {
+	    background-position: right;
+	}
+	}
+
+	@keyframes heartBlast {
+	    0% {
+	    background-position: left;
+	}
+	100% {
+	    background-position: right;
+	}
+	}
+
+	.heartAnimation {
+    display: inline-block;
+    -webkit-animation-name: heartBlast;
+    animation-name: heartBlast;
+    -webkit-animation-duration: .8s;
+    animation-duration: .8s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: steps(28);
+    animation-timing-function: steps(28);
+    background-position: right;
+    }
+    .feed p{font-family: "Microsoft YaHei",'Georgia', Times, Times New Roman, serif; font-size: calc(2.5rem/2);}
+    .feed{clear: both; margin-bottom: :20px; height: calc(15rem/2); position: relative;}
+    /*a{color: #7ac9ed;}*/
+    p{margin: 0px; padding: 0px;}
