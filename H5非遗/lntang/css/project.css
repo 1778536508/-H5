@@ -183,10 +183,26 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
         color: #777777;
         letter-spacing: 0;
         margin-top: 0.3rem;
-        font-family: PingFangSC-Light;
-        letter-spacing: 1px; }
-        .content .forma_duce > div:nth-child(1) p span:nth-child(2) {
-          margin-left: 0.5rem; }
+        zoom: 1; }
+        .content .forma_duce > div:nth-child(1) p:after {
+          display: block;
+          clear: both;
+          content: ''; }
+        .content .forma_duce > div:nth-child(1) p:nth-child(2) {
+          font-size: 0.5rem;
+          font-family: PingFangSC-Light;
+          color: #4283EB;
+          letter-spacing: 1px; }
+        .content .forma_duce > div:nth-child(1) p:nth-child(4) span {
+          display: block;
+          float: left;
+          height: 0.5rem;
+          border-right: 1px solid;
+          margin-right: 0.2rem;
+          padding-right: 0.2rem;
+          line-height: 0.5rem; }
+          .content .forma_duce > div:nth-child(1) p:nth-child(4) span:nth-child(1) {
+            border: none; }
     .content .forma_duce > div:nth-child(2) {
       float: right;
       zoom: 1;
@@ -643,4 +659,4 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   top: 0;
   z-index: 1; }
 
-/*# sourceMappingURL=name.css.map */
+/*# sourceMappingURL=project.css.map */

@@ -171,7 +171,7 @@ define(["text!search/search.tpl"], function(testTpl) {
 			//"offset":  （分页数-1）*一页的条数
 			//"limit": 	     一页的条数
 			//"category":	 分类
-			
+
 			if((cate != undefined && cate != "undefined" && cate != 0) && (code != undefined  && code != "undefined" && code != "") && type != null){
 				condition = { "keyword": val, "offset": off, "limit": lim, "category":cate, "area":code, "type":type};
 			}else{
@@ -192,6 +192,13 @@ define(["text!search/search.tpl"], function(testTpl) {
 				condition.type = type;
 			}else{
 				delete condition.type;
+			}
+			
+			//判断是否存在关键字
+			if(val != "" && val != undefined){
+				condition.keyword = val;
+			}else{
+				delete condition.keyword;
 			}
 			
 			console.log(condition);

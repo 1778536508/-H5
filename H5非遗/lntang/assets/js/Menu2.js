@@ -119,6 +119,7 @@ setTimeout(function(){
 			'transition':'all 0.5s'
 		})
 		typeHide();
+		move();
 	})
 	
 	 $('#Catalog_list>li').click(function(){
@@ -394,6 +395,22 @@ setTimeout(function(){
 	
 },20)
 	
-	
+	$('body').on("click",'.heart',function(){
+	    	var idNum=$(this).attr("id");
+	    	var linkNum=idNum.split("like");
+				console.log(linkNum);
+	        var messageID=linkNum[1];
+	        var link_con=parseInt($("#likeCount"+messageID).html());
+	    	$(this).css("background-position","")
+	        var link_rel=$(this).attr("rel");
+	        if(link_rel === 'like'){
+		        $("#likeCount"+messageID).html(link_con+1);
+		        $(this).addClass("heartAnimation").attr("rel","unlike");
+	        }else{
+		        $("#likeCount"+messageID).html(link_con-1);
+		        $(this).removeClass("heartAnimation").attr("rel","like");
+		        $(this).css("background-position","left");
+	        }
+	    });
 	
 })

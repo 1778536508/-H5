@@ -2770,6 +2770,22 @@ Handlebars.template = Handlebars.VM.template;
 	
 	
 	
+//	Handlebars.registerHelper("getContent_pro", function(Data, keys, id) {			
+//		//定义一个变量
+//		var content = "";
+//		if(Data.attributeId == id){
+//			//jq循环数据
+//			$.each(keys, function(i, val) {
+//				content = val.uri;
+//				return;
+//			})
+//		}
+//		//最后返回数据变量
+//		return content;
+//	})
+	
+	
+	
 	
 
 
