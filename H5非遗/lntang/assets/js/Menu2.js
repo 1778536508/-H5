@@ -1,5 +1,7 @@
 $(function () {
 	
+	
+
 	//header
 	var str_header = '<header>'+
 						'<a href="javascript:;" class="left">'+
@@ -14,6 +16,27 @@ $(function () {
 						'</a>'+
 					'</header>';
 	$('#box_header').append(str_header);
+	
+	//判断用户是否使用微信浏览器
+	$(function(){
+		if(isWeixin()){
+			$('#box_header').css('display','none');
+			$('#content_search').css({
+				'top':'3.25rem'
+			})
+			$('#box_list').css({
+				'top':'0'
+			})
+		}
+	})
+	function isWeixin(){
+		var ifData = window.navigator.userAgent.toLowerCase();
+		if(ifData.match(/MicroMessenger/i) == 'micromessenger'){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	
 
 

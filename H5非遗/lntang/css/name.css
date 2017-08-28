@@ -127,42 +127,8 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   background: #f5f6f8; }
   .content .banner {
     width: 16rem; }
-    .content .banner .swiper-container-video {
-      width: 100%;
-      position: relative;
-      overflow: hidden; }
-      .content .banner .swiper-container-video .swiper-wrapper {
-        width: 100%; }
-        .content .banner .swiper-container-video .swiper-wrapper .swiper-slide {
-          width: 100%;
-          position: relative; }
-          .content .banner .swiper-container-video .swiper-wrapper .swiper-slide img {
-            width: 100%; }
-          .content .banner .swiper-container-video .swiper-wrapper .swiper-slide .clIck {
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 2.5rem;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -1.25rem;
-            margin-top: -1.25rem; }
-            .content .banner .swiper-container-video .swiper-wrapper .swiper-slide .clIck .triangle-right {
-              width: 0;
-              height: 0;
-              border-top: 0.5rem solid transparent;
-              border-left: 1rem solid #FFFFFF;
-              border-bottom: 0.5rem solid transparent;
-              opacity: 0.7;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              margin-left: -0.25rem;
-              margin-top: -0.5rem; }
-      .content .banner .swiper-container-video .swiper-pagination .swiper-pagination-bullet-active {
-        background: #FFFFFF; }
+    .content .banner img {
+      width: 100%; }
   .content .forma_duce {
     width: 16rem;
     zoom: 1; }
@@ -595,7 +561,7 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   position: fixed;
   right: -12.5rem;
   top: 2.3rem;
-  z-index: 9; }
+  z-index: 10; }
   #gong .Catalog h4 {
     font-size: calc(1.5rem/2);
     color: #1B1B1B;

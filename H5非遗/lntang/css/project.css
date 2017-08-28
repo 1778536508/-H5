@@ -611,7 +611,7 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   position: fixed;
   right: -12.5rem;
   top: 2.3rem;
-  z-index: 9; }
+  z-index: 10; }
   #gong .Catalog h4 {
     font-size: calc(1.5rem/2);
     color: #1B1B1B;

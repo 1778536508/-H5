@@ -199,6 +199,9 @@ define(["text!search/search.tpl"], function(testTpl) {
 				condition.keyword = val;
 			}else{
 				delete condition.keyword;
+				$('#p_content').css('display', 'block');
+				$('#paging').css('display','none');
+				return;
 			}
 			
 			console.log(condition);
@@ -214,6 +217,7 @@ define(["text!search/search.tpl"], function(testTpl) {
 					console.log('>>>>>总数据>>>>>>>>>', obj)
 					console.log("---内容数据---->", obj.data);
 					console.log('-----------', obj.data.length);
+					
 					//判断有无内容
 					setTimeout(function(){
 						if(obj == null || obj.data == null || obj.data.length == 0) {
@@ -278,15 +282,24 @@ define(["text!search/search.tpl"], function(testTpl) {
 					for(var i=0; i<valList.length; i++){
 						$(valList[i]).text('#'+getCategoryTextById($(valList[i]).attr('data_list_p')));
 					}
-
+					
+					
 				},
 				error: function(error) {
 					$('#p_content').css('display', 'block');
+					$('#paging').css('display','none');
 				}
 			});
+			
+			
+			    
+			
+			
 		}
 		
-		
+
+			
+
 		
 		
 

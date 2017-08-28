@@ -176,51 +176,8 @@ html,body,.box{
     background: #f5f6f8;
     .banner{
         width: 16rem;
-        .swiper-container-video{
+        img{
             width: 100%;
-            @include pos(relative);
-            overflow: hidden;
-            .swiper-wrapper{
-                width: 100%;
-                .swiper-slide{
-                    width: 100%;
-                    @include pos(relative);
-                    img{
-                        width: 100%;
-                    }
-                    .clIck{
-                        width: 2.5rem;
-                        height: 2.5rem;
-                        border-radius: 2.5rem;
-                        background: rgba(0,0,0,0.30);
-                        border: 1px solid rgba(255,255,255,0.50);
-                        @include pos();
-                        left: 50%;
-                        top: 50%;
-                        margin-left: -1.25rem;
-                        margin-top: -1.25rem;
-                        .triangle-right {
-                            width: 0;
-                            height: 0;
-                            border-top: 0.5rem solid transparent;
-                            border-left: 1rem solid #FFFFFF;
-                            border-bottom: 0.5rem solid transparent;
-                            opacity: 0.7;
-                            @include pos();
-                            left: 50%;
-                            top: 50%;
-                            margin-left: -0.25rem;
-                            margin-top: -0.5rem;
-                        }
-                    }
-                    
-                }
-            }
-            .swiper-pagination{
-                .swiper-pagination-bullet-active {
-                    background: #FFFFFF;
-                }
-            }
         }
     }
     .forma_duce{
@@ -713,7 +670,7 @@ html,body,.box{
         @include pos(fixed);
         right: -12.5rem;
         top: 2.3rem;
-        z-index: 9;
+        z-index: 10;
         h4{
             font-size: calc(1.5rem/2);
             color: #1B1B1B;

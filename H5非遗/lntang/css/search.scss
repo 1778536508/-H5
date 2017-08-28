@@ -26,6 +26,7 @@ html,body,.box{
 }
 //上导航
 .box_header{
+    margin: 0 auto;
     width: 16rem;
     height: 2.3rem;
     header{
@@ -72,6 +73,7 @@ html,body,.box{
 }
 //分类
 .box_list{
+    margin: 0 auto;
     width: 16rem;
     height: calc(6.5rem/2);
     z-index: 999;
@@ -117,7 +119,7 @@ html,body,.box{
 //内容
 .content{
     width: 16rem;
-
+    margin: 0 auto;
     //搜索
     .content_search{
     //  display: none;
@@ -245,9 +247,11 @@ html,body,.box{
         
         //搜索content
         .sou_content{
+            margin: 0 auto;
             width: 16rem;
             height: 100%;
             display: none;
+            @include pos(relative);
             ul{
                 width: 16rem;
                 padding-top: 1rem;
@@ -345,7 +349,7 @@ html,body,.box{
             .Load{
                 width: 16rem;
                 height: calc(3.2rem/2);
-                @include pos(fixed);
+                @include pos();
                 left: 0;
                 bottom: 0;
                 z-index: 50;
