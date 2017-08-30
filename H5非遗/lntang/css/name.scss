@@ -26,6 +26,7 @@ html,body,.box{
 }
 //上导航
 .box_header{
+    margin: 0 auto;
     width: 16rem;
     height: 2.3rem;
     header{
@@ -72,6 +73,7 @@ html,body,.box{
 }
 //list
 .box_list{
+    margin: 0 auto;
     width: 16rem;
     height: calc(6.5rem/2);
     z-index: 999;
@@ -114,66 +116,74 @@ html,body,.box{
 }
 
 
-//搜索
-.content_search{
-//  display: none;
-    width: 16rem;
-    height: calc(4.9rem/2);
-    background: rgba(245,246,248,0.2);
-    @include pos(fixed);
-    left: 0;
-    top: 5.55rem;
-    z-index: 2;
-    //菜单
-    .banner_remove{
-        @include pos();
-        top: 0.6rem;
-        right: calc(2.1rem/2);
-        z-index: 1;
-        a{
-            display: block;
-            img{
-                width: calc(1.3rem/2);
-                height: calc(1.4rem/2);
-                margin-left: 0.1rem;
-            }
-            span{
-                
-            }
-        }
-    }
-    //搜索
-    .banner_search{
-        z-index: 1;
-        input[type='text']{
-            padding-left: calc(2.1rem/2);
-            width: calc(16rem-2.1rem/2);
-            height: calc(4.9rem/2); 
-            border: none;
-            outline: none;
-            background-color:transparent;
-//              border-bottom: 2px solid #FFFFFF;
-            font-size: calc(1.3rem/2);
-            color: #FFFFFF;
-            z-index: 1;
-        }
-        input[type='image']{
-            @include pos();
-            right: calc(5.6rem/2);
-            top: calc(1.5rem/2);
-            width: calc(1.7rem/2);
-            height: calc(1.7rem/2);
-            outline: none;
-            z-index: 1;
-        }
-    }
-}
+
 
 
 
 .content{
+    margin: 0 auto;
     width: 16rem;
     background: #f5f6f8;
+    @include pos(relative);
+    //搜索
+    .content_search{
+    //  display: none;
+        width: 16rem;
+        height: calc(4.9rem/2);
+        background: rgba(245,246,248,0.2);
+        @include pos();
+        left: 0;
+        top: 0;
+        z-index: 2;
+        //菜单
+        .banner_remove{
+            @include pos();
+            top: 0.6rem;
+            right: calc(2.1rem/2);
+            z-index: 1;
+            a{
+                display: block;
+                img{
+                    width: calc(1.3rem/2);
+                    height: calc(1.4rem/2);
+                    margin-left: 0.1rem;
+                }
+                span{
+                    
+                }
+            }
+        }
+        //搜索
+        .banner_search{
+            z-index: 1;
+            input[type='text']{
+                padding-left: calc(2.1rem/2);
+                width: calc(16rem-2.1rem/2);
+                height: calc(4.9rem/2); 
+                border: none;
+                outline: none;
+                background-color:transparent;
+    //              border-bottom: 2px solid #FFFFFF;
+                font-size: calc(1.3rem/2);
+                color: #FFFFFF;
+                z-index: 1;
+            }
+            input[type='image']{
+                @include pos();
+                right: calc(5.6rem/2);
+                top: calc(1.5rem/2);
+                width: calc(1.7rem/2);
+                height: calc(1.7rem/2);
+                outline: none;
+                z-index: 1;
+            }
+        }
+    }
+    
+    
+    
+    
+    
     .banner{
         width: 16rem;
         img{
@@ -246,8 +256,11 @@ html,body,.box{
             background: #FFFFFF;
             margin: 0 auto;
             padding-top: 1.1rem;
+            padding-bottom: 1rem;
             box-shadow: 0 0 20px 1px rgba(0,0,0,0.2);
             border-radius: 0.25rem;
+            @include pos(relative);
+            overflow: hidden;
             h4{
                 font-size: 0.65rem;
                 font-family: PingFangSC-Medium;
@@ -262,10 +275,9 @@ html,body,.box{
 //              border: 1px solid;
                 li{
                     width: 90%;
-                    @include clearfix;
-//                  border: 1px solid;
+                    @include clearfix;                   
                     line-height: 1rem;
-                    margin-top: 0.9rem;
+                    margin-top: 1.5rem;
                     &>div{
                         float: left;
                         img{
@@ -288,6 +300,24 @@ html,body,.box{
                         &:nth-child(2){
                             margin-left: 0.65rem;
                         }
+                    }
+                }
+            }
+            .Load_la{
+                width: 90%;
+                margin: 0 auto;
+                text-align: center;
+                @include pos();
+                left: 0;
+                bottom: 0.5rem;
+                img{
+                    display: none;
+                    width: 1rem;
+                    height: 0.5rem;
+                    margin: 0 auto;
+                    margin-top: 0.5rem;
+                    &.shOp{
+                        display: block;
                     }
                 }
             }
@@ -425,10 +455,14 @@ html,body,.box{
             }
             //视频
             .viDeo2{
+                display: none;
                 width: 16rem;
                 height: 8rem;
                 margin-top: 0.6rem;
                 @include pos(relative);
+                &:first-of-type{
+                    display: block;
+                }
                 .clIck2{
                     width: 2.5rem;
                     height: 2.5rem;
@@ -459,12 +493,16 @@ html,body,.box{
                 }
             }
             .For_h{
+                display: none;
                 font-family: PingFangSC-Light;
                 font-size: 0.5rem;
                 color: #777777;
                 letter-spacing: 0;
                 text-align: center;
                 padding:0.6rem 0 1rem 0 ;
+                &:first-of-type{
+                    display: block;
+                }
             }
             .For_content2{
                 font-family: PingFangSC-Light;
@@ -499,17 +537,21 @@ html,body,.box{
                 @include clearfix;
                 margin-top: 0.65rem;
                 &>div{
+                    display: none;
                     float: left;
                     &:nth-child(1){
+                        display: block;
                         width: calc(21.2rem/2);
                         height: calc(19.8rem/2);
                     }
-                    &:nth-child(2){
+                    &:nth-child(2){ 
+                        display: block;
                         width: calc(10.6rem/2);
                         height: calc(9.8rem/2);
                         float: right;
                     }
                     &:nth-child(3){
+                        display: block;
                         float: right;
                         width: calc(10.6rem/2);
                         height: calc(9.8rem/2);
@@ -557,6 +599,10 @@ html,body,.box{
                 height: calc(16.1rem/2);
                 @include pos(relative);
                 margin-top: 0.6rem;
+                display: none;
+                &:first-of-type{
+                    display: block;
+                }
                 div{
                     @include clearfix;
 //                  border: 1px solid;
@@ -589,6 +635,10 @@ html,body,.box{
                 letter-spacing: 0;
                 text-align: center;
                 padding:0.6rem 0 1rem 0 ;
+                display: none;
+                &:first-of-type{
+                    display: block;
+                }
             }
             .For_content4{
                 font-family: PingFangSC-Light;
@@ -647,14 +697,13 @@ html,body,.box{
 #gong{
     //目录
     .menu{
-    //  display: none;
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(9.7rem/2);
-    //  bottom: calc(13.7rem/2);
-        a{
+        span{
             display: block;
             @extend %full;
             img{
@@ -668,7 +717,8 @@ html,body,.box{
         height: 100%;
         background: #f5f6f8;
         @include pos(fixed);
-        right: -12.5rem;
+        right: 50%;
+        margin-right: calc(-82rem/4);
         top: 2.3rem;
         z-index: 10;
         h4{
@@ -704,7 +754,8 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(9.7rem/2);
         a{
             display: block;
@@ -719,9 +770,10 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(5.7rem/2);
-        a{
+        span{
             display: block;
             @extend %full;
             img{
@@ -737,11 +789,22 @@ html,body,.box{
         opacity: 0.56;
         background: #1B1B1B;
         @include pos(fixed);
-        left: 0;
+        left: 50%;
+        margin-left: -8rem;
         top: 0;
         z-index: 1;
     }
 }
+.Mosaic{
+        width: calc(25rem/2);
+        height: 100%;
+        background: #FFFFFF;
+        @include pos(fixed);
+        right: 50%;
+        margin-right:calc(-82rem/4);
+        top: 2.3rem;
+        z-index: 9999;
+    }
 
 
 

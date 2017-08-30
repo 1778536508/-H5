@@ -230,7 +230,8 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(9.7rem/2);
         z-index: 9;
     //  bottom: calc(13.7rem/2);
@@ -284,7 +285,8 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(9.7rem/2);
         z-index: 9;
         a{
@@ -300,10 +302,11 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(5.7rem/2);
         z-index: 9;
-        a{
+        span{
             display: block;
             @extend %full;
             img{

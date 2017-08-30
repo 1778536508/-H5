@@ -171,7 +171,7 @@
 	left: 50%;
 	transform: rotate(270deg);
 	margin-left: calc(-2.7rem/4);
-	bottom: -0.2rem;
+	bottom: 2.5rem;
 }
 
 .swiper-button-next.swiper-button-black,

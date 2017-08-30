@@ -182,7 +182,9 @@ html,body,.box{
     
     .box_search{
         width: 16rem;
-        z-index: 999;
+//      z-index: 999;
+        @include pos(relative);
+        overflow: hidden;
         .search{
             width: 16rem;
             @include pos(relative);
@@ -251,7 +253,6 @@ html,body,.box{
             width: 16rem;
             height: 100%;
             display: none;
-            @include pos(relative);
             ul{
                 width: 16rem;
                 padding-top: 1rem;
@@ -374,23 +375,25 @@ html,body,.box{
             
             
             #Load_none{
-                width: 100%;
+                width: 16rem;
                 height: 100%; 
                 display: none; 
-                position: absolute; 
-                left: 0;
+                @include pos(fixed); 
+                left: 50%;
+                margin-left: -8rem;
                 top: 0;
                 opacity: 0.56;
                 background: #1B1B1B;
                 text-align: center;
+                z-index: 900;
                 img{
                     width: 4rem;
                     height: 4rem;
                     margin-top: 10rem;
                 }
             }
-        }
         
+        }
         
         
         
@@ -404,8 +407,10 @@ html,body,.box{
 //          height: 25.68rem;
             height: 100%;
             background: #FFFFFF;
+            right: 0;
             @include pos(fixed);
-            right: -12.5rem;
+            right: 50%;
+            margin-right: calc(-82rem/4);
             top: 2.3rem;
             z-index: 900;
             overflow:scroll;
@@ -479,7 +484,8 @@ html,body,.box{
         #list_menu_input{
             @include pos(fixed);
             bottom: 0;
-            right: -12.5rem;
+            right: 50%;
+            margin-right: calc(-82rem/4);
             @include clearfix;
             z-index: 1000;
             input{
@@ -504,12 +510,11 @@ html,body,.box{
         
         .Two_Stage_Classification{
             width: calc(25rem/2);
-//          height: 10rem;
             height: 100%;
-//          height: 21.68rem;
             background: #FFFFFF;
             @include pos(fixed);
-            right: -12.5rem;
+            right: 50%;
+            margin-right: calc(-82rem/4);
             top: 2.3rem;
             z-index: 910;
 //          overflow: hidden;
@@ -550,7 +555,8 @@ html,body,.box{
             width: 100%;
             height: 100%;
             @include pos(fixed);
-            left: 0;
+            left: 50%;
+            margin-left: -8rem;
             top: 0;
             z-index: 905;
 //          opacity: 0.56;
@@ -567,14 +573,12 @@ html,body,.box{
         .Three_Stage_Classification{
             width: calc(25rem/2);
             height: 100%;
-//          height: 21.68rem;
             background: #FFFFFF;
             @include pos(fixed);
-            right: -12.5rem;
+            right: 50%;
+            margin-right:calc(-82rem/4);
             top: 2.3rem;
             z-index: 920;
-//          overflow: hidden;
-//          border: 1px solid;
             overflow-y:scroll;
             .Three_Stage_Classification_scroll{
                 width: calc(25rem/2);
@@ -605,24 +609,29 @@ html,body,.box{
             }
         }
         
-        //二级遮盖层
+        //三级遮盖层
         #cover_Three{
             display: none;
             width: 100%;
             height: 100%;
             @include pos(fixed);
-            left: 0;
+            left: 50%;
+            margin-left: -8rem;
             top: 0;
             z-index: 915;
 //          opacity: 0.56;
 //          background: #1B1B1B;
         }
-        
-        
-        
-        
-        
-        
+        .Mosaic{
+            width: calc(25rem/2);
+            height: 100%;
+            background: #FFFFFF;
+            @include pos(fixed);
+            right: 50%;
+            margin-right:calc(-82rem/4);
+            top: 2.3rem;
+            z-index: 9999;
+        }  
     }
 }
 
@@ -634,10 +643,10 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(9.7rem/2);
         z-index: 9;
-    //  bottom: calc(13.7rem/2);
         a{
             display: block;
             @extend %full;
@@ -688,7 +697,8 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(9.7rem/2);
         z-index: 9;
         a{
@@ -704,10 +714,11 @@ html,body,.box{
         width: calc(3.6rem/2);
         height: calc(3.4rem/2);
         @include pos(fixed);
-        right: calc(2rem/2);
+        right: 50%;
+        margin-right: calc(-28.6rem/4);
         bottom: calc(5.7rem/2);
         z-index: 9;
-        a{
+        span{
             display: block;
             @extend %full;
             img{
@@ -719,11 +730,12 @@ html,body,.box{
     .cover{
         display: none;
         width: 16rem;
-        height: 50rem;
+        height: 100%;
         opacity: 0.56;
         background: #1B1B1B;
         @include pos(fixed);
-        left: 0;
+        left: 50%;
+        margin-left: -8rem;
         top: 0;
         z-index: 1;
     }

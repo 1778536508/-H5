@@ -70,14 +70,14 @@ define(["text!search/region.tpl"],function(testTpl){
 			function show(){
 				$('#cover_tow').css('display','block');
 				$('#Two_Stage_Classification').css({
-								'right':'0',
+								'margin-right':'calc(-33rem/4)',
 								'transition':'all 0.5s'
 				})
 			}
 			function show2(){
 				$('#cover_Three').css('display','block');
 				$('#Three_Stage_Classification').css({
-								'right':'0',
+								'margin-right':'calc(-33rem/4)',
 								'transition':'all 0.5s'
 				})
 			}

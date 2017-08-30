@@ -5,11 +5,12 @@
 html {
   box-sizing: border-box; }
 
-html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong .Catalog ul li a, #gong .Return a, #gong .Return a img, #gong .add a, #gong .add a img {
+html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img, #gong .Catalog ul li a, #gong .Return a, #gong .Return a img, #gong .add span, #gong .add span img {
   width: 100%;
   height: 100%; }
 
 .box_header {
+  margin: 0 auto;
   width: 16rem;
   height: 2.3rem; }
   .box_header header {
@@ -52,6 +53,7 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
       color: #FFFFFF; }
 
 .box_list {
+  margin: 0 auto;
   width: 16rem;
   height: calc(6.5rem/2);
   z-index: 999; }
@@ -82,87 +84,55 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
         font-size: 0.45rem;
         color: #c0c0c0; }
 
-.content_search {
-  width: 16rem;
-  height: calc(4.9rem/2);
-  background: rgba(245, 246, 248, 0.2);
-  position: fixed;
-  left: 0;
-  top: 5.55rem;
-  z-index: 2; }
-  .content_search .banner_remove {
-    position: absolute;
-    top: 0.6rem;
-    right: calc(2.1rem/2);
-    z-index: 1; }
-    .content_search .banner_remove a {
-      display: block; }
-      .content_search .banner_remove a img {
-        width: calc(1.3rem/2);
-        height: calc(1.4rem/2);
-        margin-left: 0.1rem; }
-  .content_search .banner_search {
-    z-index: 1; }
-    .content_search .banner_search input[type='text'] {
-      padding-left: calc(2.1rem/2);
-      width: calc(16rem-2.1rem/2);
-      height: calc(4.9rem/2);
-      border: none;
-      outline: none;
-      background-color: transparent;
-      font-size: calc(1.3rem/2);
-      color: #FFFFFF;
-      z-index: 1; }
-    .content_search .banner_search input[type='image'] {
-      position: absolute;
-      right: calc(5.6rem/2);
-      top: calc(1.5rem/2);
-      width: calc(1.7rem/2);
-      height: calc(1.7rem/2);
-      outline: none;
-      z-index: 1; }
-
 .content {
+  margin: 0 auto;
   width: 16rem;
-  background: #f5f6f8; }
+  background: #f5f6f8;
+  position: relative;
+  overflow: hidden; }
+  .content .content_search {
+    width: 16rem;
+    height: calc(4.9rem/2);
+    background: rgba(245, 246, 248, 0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2; }
+    .content .content_search .banner_remove {
+      position: absolute;
+      top: 0.6rem;
+      right: calc(2.1rem/2);
+      z-index: 1; }
+      .content .content_search .banner_remove a {
+        display: block; }
+        .content .content_search .banner_remove a img {
+          width: calc(1.3rem/2);
+          height: calc(1.4rem/2);
+          margin-left: 0.1rem; }
+    .content .content_search .banner_search {
+      z-index: 1; }
+      .content .content_search .banner_search input[type='text'] {
+        padding-left: calc(2.1rem/2);
+        width: calc(16rem-2.1rem/2);
+        height: calc(4.9rem/2);
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: calc(1.3rem/2);
+        color: #FFFFFF;
+        z-index: 1; }
+      .content .content_search .banner_search input[type='image'] {
+        position: absolute;
+        right: calc(5.6rem/2);
+        top: calc(1.5rem/2);
+        width: calc(1.7rem/2);
+        height: calc(1.7rem/2);
+        outline: none;
+        z-index: 1; }
   .content .banner {
     width: 16rem; }
-    .content .banner .swiper-container-video {
-      width: 100%;
-      position: relative;
-      overflow: hidden; }
-      .content .banner .swiper-container-video .swiper-wrapper {
-        width: 100%; }
-        .content .banner .swiper-container-video .swiper-wrapper .swiper-slide {
-          width: 100%;
-          position: relative; }
-          .content .banner .swiper-container-video .swiper-wrapper .swiper-slide img {
-            width: 100%; }
-          .content .banner .swiper-container-video .swiper-wrapper .swiper-slide .clIck {
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 2.5rem;
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -1.25rem;
-            margin-top: -1.25rem; }
-            .content .banner .swiper-container-video .swiper-wrapper .swiper-slide .clIck .triangle-right {
-              width: 0;
-              height: 0;
-              border-top: 0.5rem solid transparent;
-              border-left: 1rem solid #FFFFFF;
-              border-bottom: 0.5rem solid transparent;
-              opacity: 0.7;
-              position: absolute;
-              left: 50%;
-              top: 50%;
-              margin-left: -0.25rem;
-              margin-top: -0.5rem; }
-      .content .banner .swiper-container-video .swiper-pagination .swiper-pagination-bullet-active {
-        background: #FFFFFF; }
+    .content .banner img {
+      width: 100%; }
   .content .forma_duce {
     width: 16rem;
     zoom: 1; }
@@ -172,69 +142,99 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
       content: ''; }
     .content .forma_duce > div:nth-child(1) {
       margin-left: 0.55rem;
-      margin-top: 0.5rem;
-      float: left; }
+      margin-top: 0.5rem; }
       .content .forma_duce > div:nth-child(1) h3 {
-        font-size: 1rem;
-        color: #1B1B1B; }
-      .content .forma_duce > div:nth-child(1) p {
-        font-family: PingFangSC-Light;
-        font-size: 0.5rem;
-        color: #777777;
-        letter-spacing: 0;
-        margin-top: 0.3rem;
+        width: 16rem; }
+        .content .forma_duce > div:nth-child(1) h3 ul {
+          width: 16rem;
+          zoom: 1; }
+          .content .forma_duce > div:nth-child(1) h3 ul:after {
+            display: block;
+            clear: both;
+            content: ''; }
+          .content .forma_duce > div:nth-child(1) h3 ul li {
+            font-size: 1rem;
+            color: #1B1B1B; }
+            .content .forma_duce > div:nth-child(1) h3 ul li:nth-child(1) {
+              float: left; }
+            .content .forma_duce > div:nth-child(1) h3 ul li:nth-child(2) {
+              float: right; }
+            .content .forma_duce > div:nth-child(1) h3 ul li div {
+              zoom: 1;
+              margin-right: 0.6rem;
+              padding-top: 0.2rem; }
+              .content .forma_duce > div:nth-child(1) h3 ul li div:after {
+                display: block;
+                clear: both;
+                content: ''; }
+              .content .forma_duce > div:nth-child(1) h3 ul li div a {
+                display: block;
+                float: left;
+                zoom: 1;
+                position: relative; }
+                .content .forma_duce > div:nth-child(1) h3 ul li div a:after {
+                  display: block;
+                  clear: both;
+                  content: ''; }
+                .content .forma_duce > div:nth-child(1) h3 ul li div a:nth-child(2) {
+                  margin-left: 1rem; }
+                .content .forma_duce > div:nth-child(1) h3 ul li div a img {
+                  width: 0.8rem;
+                  height: 0.75rem;
+                  float: left;
+                  margin-right: 0.2rem; }
+                .content .forma_duce > div:nth-child(1) h3 ul li div a span {
+                  font-size: 0.5rem;
+                  color: #333333;
+                  float: left;
+                  margin-right: 0.5rem; }
+                .content .forma_duce > div:nth-child(1) h3 ul li div a:nth-child(1) {
+                  margin-right: 0.5rem; }
+      .content .forma_duce > div:nth-child(1) div {
         zoom: 1; }
-        .content .forma_duce > div:nth-child(1) p:after {
+        .content .forma_duce > div:nth-child(1) div:after {
           display: block;
           clear: both;
           content: ''; }
-        .content .forma_duce > div:nth-child(1) p:nth-child(2) {
-          font-size: 0.5rem;
+        .content .forma_duce > div:nth-child(1) div p {
+          float: left;
           font-family: PingFangSC-Light;
-          color: #4283EB;
-          letter-spacing: 1px; }
-        .content .forma_duce > div:nth-child(1) p:nth-child(4) span {
-          display: block;
-          float: left;
-          height: 0.5rem;
-          border-right: 1px solid;
-          margin-right: 0.2rem;
-          padding-right: 0.2rem;
-          line-height: 0.5rem; }
-          .content .forma_duce > div:nth-child(1) p:nth-child(4) span:nth-child(1) {
-            border: none; }
-    .content .forma_duce > div:nth-child(2) {
-      float: right;
-      zoom: 1;
-      margin-right: 0.6rem;
-      margin-top: 0.9rem; }
-      .content .forma_duce > div:nth-child(2):after {
-        display: block;
-        clear: both;
-        content: ''; }
-      .content .forma_duce > div:nth-child(2) a {
-        display: block;
-        float: left;
-        zoom: 1;
-        position: relative; }
-        .content .forma_duce > div:nth-child(2) a:after {
-          display: block;
-          clear: both;
-          content: ''; }
-        .content .forma_duce > div:nth-child(2) a:nth-child(2) {
-          margin-left: 1rem; }
-        .content .forma_duce > div:nth-child(2) a img {
-          width: 0.8rem;
-          height: 0.75rem;
-          float: left;
-          margin-right: 0.2rem; }
-        .content .forma_duce > div:nth-child(2) a span {
           font-size: 0.5rem;
-          color: #333333;
+          color: #777777;
+          letter-spacing: 0;
+          margin-top: 0.3rem;
+          font-family: PingFangSC-Light;
+          letter-spacing: 1px; }
+        .content .forma_duce > div:nth-child(1) div ul {
           float: left;
-          margin-right: 0.5rem; }
-        .content .forma_duce > div:nth-child(2) a:nth-child(1) {
-          margin-right: 0.5rem; }
+          zoom: 1;
+          margin-left: 0.5rem; }
+          .content .forma_duce > div:nth-child(1) div ul:after {
+            display: block;
+            clear: both;
+            content: ''; }
+          .content .forma_duce > div:nth-child(1) div ul li {
+            float: left;
+            font-family: PingFangSC-Light;
+            font-size: 0.5rem;
+            color: #777777;
+            letter-spacing: 0;
+            margin-top: 0.3rem;
+            font-family: PingFangSC-Light;
+            letter-spacing: 1px;
+            width: 1.7rem;
+            text-align: left;
+            border-left: 1px solid;
+            padding-left: 0.2rem; }
+            .content .forma_duce > div:nth-child(1) div ul li:nth-child(1) {
+              border: none; }
+        .content .forma_duce > div:nth-child(1) div:nth-child(2) p {
+          color: #6a9dee; }
+        .content .forma_duce > div:nth-child(1) div:nth-child(2) ul li {
+          color: #6a9dee;
+          width: auto; }
+        .content .forma_duce > div:nth-child(1) div:nth-child(3) ul li {
+          width: 3rem; }
   .content .inherit {
     width: 16rem;
     padding-top: 1.25rem; }
@@ -244,8 +244,11 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
       background: #FFFFFF;
       margin: 0 auto;
       padding-top: 1.1rem;
+      padding-bottom: 1rem;
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.2);
-      border-radius: 0.25rem; }
+      border-radius: 0.25rem;
+      position: relative;
+      overflow: hidden; }
       .content .inherit .inherit_content h4 {
         font-size: 0.65rem;
         font-family: PingFangSC-Medium;
@@ -260,7 +263,7 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
           width: 90%;
           zoom: 1;
           line-height: 1rem;
-          margin-top: 0.9rem; }
+          margin-top: 0.7rem; }
           .content .inherit .inherit_content ul li:after {
             display: block;
             clear: both;
@@ -270,25 +273,39 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
             .content .inherit .inherit_content ul li > div img {
               width: calc(3.5rem/2);
               height: calc(3.5rem/2); }
-            .content .inherit .inherit_content ul li > div p:nth-child(1) {
-              font-size: 0.6rem;
-              font-family: PingFangTC-Regular;
-              color: #1B1B1B;
-              letter-spacing: 0;
-              font-weight: 600; }
-            .content .inherit .inherit_content ul li > div p:nth-child(2) {
+            .content .inherit .inherit_content ul li > div p {
               font-size: 0.5rem;
               font-family: PingFangTC-Light;
               color: #777777;
               letter-spacing: 0; }
+              .content .inherit .inherit_content ul li > div p:nth-child(1) {
+                font-size: 0.6rem;
+                font-family: PingFangTC-Regular;
+                color: #1B1B1B;
+                letter-spacing: 0;
+                font-weight: 600; }
             .content .inherit .inherit_content ul li > div:nth-child(2) {
               margin-left: 0.65rem; }
+      .content .inherit .inherit_content .Load_la {
+        width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        left: 0;
+        bottom: 0.5rem; }
+        .content .inherit .inherit_content .Load_la img {
+          display: none;
+          width: 1rem;
+          height: 0.5rem;
+          margin-left: 12rem;
+          margin-top: 0.5rem; }
+          .content .inherit .inherit_content .Load_la img.shOp {
+            display: block; }
     .content .inherit .inherit_content2 {
       width: calc(29.5rem/2);
-      height: calc(10.2rem/2);
       background: #FFFFFF;
       margin: 0 auto;
-      margin-top: 0.65rem; }
+      margin-top: 0.65rem;
+      padding-bottom: 0.5rem; }
       .content .inherit .inherit_content2 h4 {
         font-family: PingFangSC-Medium;
         font-size: 0.65rem;
@@ -394,49 +411,81 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
           color: #4283EA;
           margin-top: -0.5rem;
           margin-left: 0.2rem; }
-      .content .content_box .inFormation2 .For_content {
-        font-size: 0.6rem;
-        font-family: PingFangSC-Light;
-        color: #1B1B1B;
-        letter-spacing: 1px;
-        padding: 0.8rem 0.65rem; }
-      .content .content_box .inFormation2 .viDeo2 {
+      .content .content_box .inFormation2 .inFormation2_num {
         width: 16rem;
-        height: 8rem;
-        margin-top: 0.6rem;
         position: relative; }
-        .content .content_box .inFormation2 .viDeo2 .clIck2 {
-          width: 2.5rem;
-          height: 2.5rem;
-          border-radius: 2.5rem;
-          background: rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(255, 255, 255, 0.5);
+        .content .content_box .inFormation2 .inFormation2_num ul {
+          width: 16rem; }
+          .content .content_box .inFormation2 .inFormation2_num ul li {
+            width: 16rem;
+            display: none; }
+            .content .content_box .inFormation2 .inFormation2_num ul li:first-of-type {
+              display: block; }
+            .content .content_box .inFormation2 .inFormation2_num ul li .viDeo2 {
+              width: 16rem;
+              margin-top: 0.6rem;
+              position: relative; }
+              .content .content_box .inFormation2 .inFormation2_num ul li .viDeo2 .clIck2 {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 2.5rem;
+                background: rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -1.25rem;
+                margin-top: -1.25rem; }
+                .content .content_box .inFormation2 .inFormation2_num ul li .viDeo2 .clIck2 .triangle-right2 {
+                  width: 0;
+                  height: 0;
+                  border-top: 0.5rem solid transparent;
+                  border-left: 1rem solid #FFFFFF;
+                  border-bottom: 0.5rem solid transparent;
+                  opacity: 0.7;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  margin-left: -0.25rem;
+                  margin-top: -0.5rem; }
+              .content .content_box .inFormation2 .inFormation2_num ul li .viDeo2 .clIck2:hover {
+                background: rgba(255, 255, 255, 0.3); }
+            .content .content_box .inFormation2 .inFormation2_num ul li img {
+              width: 100%; }
+        .content .content_box .inFormation2 .inFormation2_num .show_num {
+          zoom: 1;
+          padding-bottom: 0.75rem;
           position: absolute;
-          left: 50%;
-          top: 50%;
-          margin-left: -1.25rem;
-          margin-top: -1.25rem; }
-          .content .content_box .inFormation2 .viDeo2 .clIck2 #triangle-right2 {
-            width: 0;
-            height: 0;
-            border-top: 0.5rem solid transparent;
-            border-left: 1rem solid #FFFFFF;
-            border-bottom: 0.5rem solid transparent;
-            opacity: 0.7;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -0.25rem;
-            margin-top: -0.5rem; }
-        .content .content_box .inFormation2 .viDeo2 .clIck2:hover {
-          background: rgba(255, 255, 255, 0.3); }
+          bottom: 0;
+          right: 0; }
+          .content .content_box .inFormation2 .inFormation2_num .show_num:after {
+            display: block;
+            clear: both;
+            content: ''; }
+          .content .content_box .inFormation2 .inFormation2_num .show_num span {
+            font-family: 'PingFangSC-Light';
+            font-size: 0.8rem;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            float: right;
+            margin-top: 0.2rem;
+            margin-left: 0.3rem;
+            margin-right: 0.6rem; }
+          .content .content_box .inFormation2 .inFormation2_num .show_num img {
+            width: calc(1.9rem/2);
+            height: calc(1.7rem/2);
+            float: right;
+            margin-top: 0.2rem; }
       .content .content_box .inFormation2 .For_h {
+        display: none;
         font-family: PingFangSC-Light;
         font-size: 0.5rem;
         color: #777777;
         letter-spacing: 0;
         text-align: center;
         padding: 0.6rem 0 1rem 0; }
+        .content .content_box .inFormation2 .For_h:first-of-type {
+          display: block; }
       .content .content_box .inFormation2 .For_content2 {
         font-family: PingFangSC-Light;
         font-size: 0.6rem;
@@ -465,33 +514,52 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
           margin-left: 0.2rem; }
       .content .content_box .inFormation3 .picTure {
         width: 16rem;
-        zoom: 1;
-        margin-top: 0.65rem; }
-        .content .content_box .inFormation3 .picTure:after {
+        margin-top: 0.65rem;
+        position: relative; }
+        .content .content_box .inFormation3 .picTure ul {
+          width: 16rem;
+          zoom: 1; }
+          .content .content_box .inFormation3 .picTure ul:after {
+            display: block;
+            clear: both;
+            content: ''; }
+          .content .content_box .inFormation3 .picTure ul li {
+            overflow: hidden;
+            display: none;
+            float: left; }
+            .content .content_box .inFormation3 .picTure ul li:nth-child(1) {
+              display: block;
+              width: calc(21.2rem/2);
+              height: calc(19.8rem/2); }
+            .content .content_box .inFormation3 .picTure ul li:nth-child(2) {
+              display: block;
+              width: calc(10.6rem/2);
+              height: calc(9.8rem/2);
+              float: right; }
+            .content .content_box .inFormation3 .picTure ul li:nth-child(3) {
+              display: block;
+              float: right;
+              width: calc(10.6rem/2);
+              height: calc(9.75rem/2);
+              margin-top: calc(0.2rem/2); }
+            .content .content_box .inFormation3 .picTure ul li img {
+              width: 100%; }
+        .content .content_box .inFormation3 .picTure span {
+          font-family: PingFangSC-Regular;
+          font-size: 0.7rem;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          text-align: center;
+          line-height: calc(9.8rem/2);
           display: block;
-          clear: both;
-          content: ''; }
-        .content .content_box .inFormation3 .picTure > div {
-          float: left; }
-          .content .content_box .inFormation3 .picTure > div:nth-child(1) {
-            width: calc(21.2rem/2);
-            height: calc(19.8rem/2); }
-          .content .content_box .inFormation3 .picTure > div:nth-child(2) {
-            width: calc(10.6rem/2);
-            height: calc(9.8rem/2);
-            float: right; }
-          .content .content_box .inFormation3 .picTure > div:nth-child(3) {
-            float: right;
-            width: calc(10.6rem/2);
-            height: calc(9.8rem/2);
-            margin-top: calc(0.2rem/2);
-            background: rgba(0, 0, 0, 0.38);
-            font-family: PingFangSC-Regular;
-            font-size: 0.7rem;
-            color: #FFFFFF;
-            letter-spacing: 0;
-            text-align: center;
-            line-height: calc(9.8rem/2); }
+          width: calc(10.6rem/2);
+          height: calc(9.8rem/2);
+          position: absolute;
+          left: 10.7rem;
+          top: 5rem;
+          background: rgba(0, 0, 0, 0.38); }
+          .content .content_box .inFormation3 .picTure span b {
+            font-weight: 500; }
       .content .content_box .inFormation3 .For_content3 {
         font-family: PingFangSC-Light;
         font-size: 0.6rem;
@@ -518,42 +586,84 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
           color: #4283EA;
           margin-top: -0.5rem;
           margin-left: 0.2rem; }
-      .content .content_box .inFormation4 .picTure2 {
-        width: calc(32rem/2);
-        height: calc(16.1rem/2);
-        position: relative;
-        margin-top: 0.6rem; }
-        .content .content_box .inFormation4 .picTure2 div {
-          zoom: 1;
-          padding-bottom: 0.75rem;
-          position: absolute;
-          bottom: 0;
-          right: 0; }
-          .content .content_box .inFormation4 .picTure2 div:after {
-            display: block;
-            clear: both;
-            content: ''; }
-          .content .content_box .inFormation4 .picTure2 div span {
-            font-family: 'PingFangSC-Light';
-            font-size: 0.8rem;
-            color: #FFFFFF;
-            letter-spacing: 0;
-            float: right;
-            margin-top: 0.2rem;
-            margin-left: 0.3rem;
-            margin-right: 0.6rem; }
-          .content .content_box .inFormation4 .picTure2 div img {
-            width: calc(1.9rem/2);
-            height: calc(1.7rem/2);
-            float: right;
-            margin-top: 0.2rem; }
+      .content .content_box .inFormation4 .banner_image {
+        width: 16rem;
+        position: relative; }
+        .content .content_box .inFormation4 .banner_image ul {
+          width: 16rem; }
+          .content .content_box .inFormation4 .banner_image ul li {
+            width: 100%;
+            display: none;
+            margin-top: 0.6rem; }
+            .content .content_box .inFormation4 .banner_image ul li:first-of-type {
+              display: block; }
+            .content .content_box .inFormation4 .banner_image ul li .viDeo2 {
+              width: 16rem;
+              margin-top: 0.6rem; }
+              .content .content_box .inFormation4 .banner_image ul li .viDeo2 .clIck2 {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 2.5rem;
+                background: rgba(0, 0, 0, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -1.25rem;
+                margin-top: -1.25rem; }
+                .content .content_box .inFormation4 .banner_image ul li .viDeo2 .clIck2 .triangle-right2 {
+                  width: 0;
+                  height: 0;
+                  border-top: 0.5rem solid transparent;
+                  border-left: 1rem solid #FFFFFF;
+                  border-bottom: 0.5rem solid transparent;
+                  opacity: 0.7;
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  margin-left: -0.25rem;
+                  margin-top: -0.5rem; }
+              .content .content_box .inFormation4 .banner_image ul li .viDeo2 .clIck2:hover {
+                background: rgba(255, 255, 255, 0.3); }
+            .content .content_box .inFormation4 .banner_image ul li .picTure2 {
+              width: calc(32rem/2);
+              position: relative; }
+              .content .content_box .inFormation4 .banner_image ul li .picTure2 img {
+                width: 100%; }
+      .content .content_box .inFormation4 .show_num {
+        zoom: 1;
+        padding-bottom: 0.75rem;
+        position: absolute;
+        bottom: 0;
+        right: 0; }
+        .content .content_box .inFormation4 .show_num:after {
+          display: block;
+          clear: both;
+          content: ''; }
+        .content .content_box .inFormation4 .show_num span {
+          font-family: 'PingFangSC-Light';
+          font-size: 0.8rem;
+          color: #FFFFFF;
+          letter-spacing: 0;
+          float: right;
+          margin-top: 0.2rem;
+          margin-left: 0.3rem;
+          margin-right: 0.6rem; }
+        .content .content_box .inFormation4 .show_num img {
+          width: calc(1.9rem/2);
+          height: calc(1.7rem/2);
+          float: right;
+          margin-top: 0.2rem; }
       .content .content_box .inFormation4 .For_h2 {
         font-family: PingFangSC-Light;
         font-size: 0.5rem;
         color: #777777;
         letter-spacing: 0;
         text-align: center;
-        padding: 0.6rem 0 1rem 0; }
+        padding: 0.6rem 0 1rem 0;
+        display: none; }
+        .content .content_box .inFormation4 .For_h2:first-of-type {
+          display: block; }
       .content .content_box .inFormation4 .For_content4 {
         font-family: PingFangSC-Light;
         font-size: 0.6rem;
@@ -600,16 +710,18 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
   position: fixed;
-  right: calc(2rem/2);
+  right: 50%;
+  margin-right: calc(-28.6rem/4);
   bottom: calc(9.7rem/2); }
-  #gong .menu a {
+  #gong .menu span {
     display: block; }
 #gong .Catalog {
   width: calc(25rem/2);
   height: 100%;
   background: #f5f6f8;
   position: fixed;
-  right: -12.5rem;
+  right: 50%;
+  margin-right: calc(-82rem/4);
   top: 2.3rem;
   z-index: 10; }
   #gong .Catalog h4 {
@@ -636,7 +748,8 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
   position: fixed;
-  right: calc(2rem/2);
+  right: 50%;
+  margin-right: calc(-28.6rem/4);
   bottom: calc(9.7rem/2); }
   #gong .Return a {
     display: block; }
@@ -644,9 +757,10 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
   position: fixed;
-  right: calc(2rem/2);
+  right: 50%;
+  margin-right: calc(-28.6rem/4);
   bottom: calc(5.7rem/2); }
-  #gong .add a {
+  #gong .add span {
     display: block; }
 #gong .cover {
   display: none;
@@ -655,8 +769,19 @@ html, body, .box, .box_list ul li a img, #gong .menu a, #gong .menu a img, #gong
   opacity: 0.56;
   background: #1B1B1B;
   position: fixed;
-  left: 0;
+  left: 50%;
+  margin-left: -8rem;
   top: 0;
   z-index: 1; }
+
+.Mosaic {
+  width: calc(25rem/2);
+  height: 100%;
+  background: #FFFFFF;
+  position: fixed;
+  right: 50%;
+  margin-right: calc(-82rem/4);
+  top: 2.3rem;
+  z-index: 9999; }
 
 /*# sourceMappingURL=project.css.map */

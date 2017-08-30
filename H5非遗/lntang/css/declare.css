@@ -5,7 +5,7 @@
 html {
   box-sizing: border-box; }
 
-html, body, .box, .box_list ul li a img, .gong .menu a, .gong .menu a img, .gong .Catalog ul li a, .gong .Return a, .gong .Return a img, .gong .add a, .gong .add a img {
+html, body, .box, .box_list ul li a img, .gong .menu a, .gong .menu a img, .gong .Catalog ul li a, .gong .Return a, .gong .Return a img, .gong .add span, .gong .add span img {
   width: 100%;
   height: 100%; }
 
@@ -166,7 +166,8 @@ html, body, .box, .box_list ul li a img, .gong .menu a, .gong .menu a img, .gong
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
   position: fixed;
-  right: calc(2rem/2);
+  right: 50%;
+  margin-right: calc(-28.6rem/4);
   bottom: calc(9.7rem/2);
   z-index: 9; }
   .gong .menu a {
@@ -203,7 +204,8 @@ html, body, .box, .box_list ul li a img, .gong .menu a, .gong .menu a img, .gong
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
   position: fixed;
-  right: calc(2rem/2);
+  right: 50%;
+  margin-right: calc(-28.6rem/4);
   bottom: calc(9.7rem/2);
   z-index: 9; }
   .gong .Return a {
@@ -212,10 +214,11 @@ html, body, .box, .box_list ul li a img, .gong .menu a, .gong .menu a img, .gong
   width: calc(3.6rem/2);
   height: calc(3.4rem/2);
   position: fixed;
-  right: calc(2rem/2);
+  right: 50%;
+  margin-right: calc(-28.6rem/4);
   bottom: calc(5.7rem/2);
   z-index: 9; }
-  .gong .add a {
+  .gong .add span {
     display: block; }
 .gong .cover {
   display: none;

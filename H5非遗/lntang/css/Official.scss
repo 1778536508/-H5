@@ -346,7 +346,6 @@ html,body,.box{
                 .swiper-slide_logo{
                     width: calc(25.6rem/2);
                     margin: calc(7rem/2) auto;
-                    padding-top: calc(2rem/2);
                     h2{
                         font-size: calc(1.9rem/2);
                         color: #FFFFFF;
@@ -410,7 +409,8 @@ html,body,.box{
     width: calc(1.8rem/2);
     height: calc(1.8rem/2);
     @include pos();
-    right: calc(1.9rem/2);
+    right: 50%;
+    margin-right: calc(-28.6rem/4);
     bottom: calc(1.2rem/2);
     z-index: 999;
     img{

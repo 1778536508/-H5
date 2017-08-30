@@ -28,7 +28,7 @@
 {{#each content_inherit}}
 	<li>
 		<div class="forma_imaGes">
-			<img src="{{getContent contentFragmentList 113}}" onclick="imgError(this)"/>
+			<img src="{{getContent contentFragmentList 113}}" class="conImg"/>
 			<p class="forma_imaGes_text">{{getContent contentFragmentList 13}}</p>
 		</div> 
 		<div class="forma_duce">
