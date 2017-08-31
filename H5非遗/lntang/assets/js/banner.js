@@ -1,13 +1,9 @@
 	setTimeout(function(){
-		
-	
 	//轮播图
 	    	var mySwiper = new Swiper('.swiper-container',{
 	    		//设置轮播的方向为上下轮播默认为true左右轮播
-//	  		direction: 'vertical',
-	
-	
-				
+//	  			direction: 'vertical',
+
 	    		//3D效果
 	    		//立体效果
 //				effect : 'cube',
@@ -30,9 +26,7 @@
 //				  shadowOffset: 100,
 //				  shadowScale: 0.6
 //				},
-				
-				
-				
+
 				//循环轮播
 				loop: true,
 				
@@ -61,8 +55,8 @@
 	    	
 	    	var mySwiper = new Swiper('.swiper-container_banner',{
 	    		//设置轮播的方向为上下轮播默认为true左右轮播
-	  		direction: 'vertical',
-			nextButton:'.swiper-button-next',
+		  		direction: 'vertical',
+				nextButton:'.swiper-button-next',
 				
 	    		//3D效果
 	    		//立体效果
@@ -86,19 +80,29 @@
 //				  shadowOffset: 100,
 //				  shadowScale: 0.6
 //				},
-				
-				
-				
+
 				//循环轮播
 				loop: false,
 				
 				//持续时间
 				speed:1000,
-				
-				
+
 				//触摸后轮播不停止(为false时,默认停止位true)
 				autoplayDisableOnInteraction : false
 	    	})
+	    	
 	    	 	
 	    	
 },100)
+setTimeout(function(){	
+	var mySwiper = new Swiper('.swiper-banner-Lu',{
+		prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next',
+		slidesPerView : 4,
+		spaceBetween : 10,
+		loop: false,
+		speed:500,
+		autoplayDisableOnInteraction : false
+	})
+},10)
+

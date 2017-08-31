@@ -237,24 +237,7 @@ $(function () {
 			
 			
 			
-			//实现滚动条无法滚动
-			var mo=function(e){
-				e.preventDefault();
-			};
 			
-			/***禁止滑动***/
-			function stop(){
-					var bo = document.getElementsByTagName('body')[0];
-			        document.body.style.overflow='hidden';        
-			        document.addEventListener("touchmove",mo,false);//禁止页面滑动
-			}
-			
-			/***取消滑动限制***/
-			function move(){
-					var bo = document.getElementsByTagName('body')[0];
-			        document.body.style.overflow='';//出现滚动条
-			        document.removeEventListener("touchmove",mo,false);        
-			}
 			
 			
 			
@@ -411,11 +394,7 @@ $(function () {
 								'transition':'all 0.5s'
 							})
 			}
-			
-			
-			
-			
-			
+
 		},20)
 	
 		//喜欢
@@ -444,38 +423,88 @@ $(function () {
 		var barNum = $('.numBerStr');
 		console.log(barNum);
 		for(var i=0; i<barNum.length; i++){
-			var strNum = $(barNum[i]).parent().parent().children('ul').children('li').length;
-			console.log(strNum);
+			var strNum = $(barNum[i]).parent().parent().children('ul').children('div').length;
+//			console.log(strNum);
 			$(barNum[i]).text(strNum);
 		}
 		
-		//点击当前图片跳转页面
+		//隐藏图片展示层
+		$('#box_layer').hide();
+		//点击显示
 		$('.link').click(function(){
 			var uLi = $(this).html();
-			localStorage.setItem('str',uLi)
-			console.log(uLi);
-			location.href="linKImg.html";
+//			console.log(uLi);
+			$('#swiper-wrapper-append').html(uLi);
+			$('#box_layer').fadeIn(500);
+			var script_src = '<script src="assets/js/banner.js" type="text/javascript" charset="utf-8"></script>';
+			$('body').append(script_src);
+			stop();
+			vide();
 		})
-		//当前点击元素添加到跳转后的页面
+		//关闭
+		$('#Close').click(function(){
+			$('#box_layer').fadeOut();
+			$('body>script').remove();
+		})
 		
-		setTimeout(function(){
-			var uli_link = localStorage.getItem('str');
-	    	$('#pics_img').html(uli_link);
-	    	localStorage.removeItem('str');
-		},10)
+		//默认显示当前点击的图片
+		var line = $('.link');
+		for(var i = 0; i< line.length; i++){
+			$(line[i]).on('click','li',function(){
+				var ult = $(this).html();
+				$('#back_img').html(ult);
+			})
+		}
 		
+		
+		//图片展示
+		$('#swiper-wrapper-append').on('click','li',function(){
+			$('#back_img').html($(this).html());
+			vide();
+		})
+		
+		
+		function vide(){
+			//视频按钮
+		    $('#back_img >').on('click','.clIck2',function(){
+		    	$(this).css('display','none');
+		    	var this_Div = $(this);
+		    	var vide_Div = $(this).prev();
+		    	for(var i = 0; i < vide_Div.length; i++){
+						vide_Div[i].play();
+						vide_Div[i].onended = function(){
+					    	this_Div.css('display','block');
+					    }
+			    }
+		    })
+		}
+		
+		
+		
+		
+
+		//实现滚动条无法滚动
+		var mo=function(e){
+			e.preventDefault();
+		};
+		
+		/***禁止滑动***/
+		function stop(){
+				var bo = document.getElementsByTagName('body')[0];
+		        document.body.style.overflow='hidden';        
+		        document.addEventListener("touchmove",mo,false);//禁止页面滑动
+		}
+		
+		/***取消滑动限制***/
+		function move(){
+				var bo = document.getElementsByTagName('body')[0];
+		        document.body.style.overflow='';//出现滚动条
+		        document.removeEventListener("touchmove",mo,false);        
+		}
 	    
 	    
-	    //视频按钮
-//	    var Vide = document.getElementsByClassName('clIck2')[0];
-//	    var vi = document.getElementById('vi');
-//	    Vide.onclick = function(){
-//	    	Vide.style.display = 'none';
-//	    	vi.play();
-//	    }
-//	    vi.onended = function(){
-//	    	Vide.style.display = 'block';
-//	    }
+	  
+		
 	    
 	    
 	    
