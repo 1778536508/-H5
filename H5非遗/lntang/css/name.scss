@@ -125,6 +125,7 @@ html,body,.box{
     width: 16rem;
     background: #f5f6f8;
     @include pos(relative);
+    overflow: hidden;
     //搜索
     .content_search{
     //  display: none;
@@ -194,140 +195,131 @@ html,body,.box{
         width: 16rem;
         @include clearfix;
         &>div{
+            
             &:nth-child(1){
                 margin-left: 0.55rem;
                 margin-top: 0.5rem;
-                float: left;
                 h3{
-                    font-size: 1rem;
-                    color: #1B1B1B;
-                }
-                p{
-                    font-family: PingFangSC-Light;
-                    font-size: 0.5rem;
-                    color: #777777;
-                    letter-spacing: 0;
-                    margin-top: 0.3rem;
-                    font-family: PingFangSC-Light;
-                    letter-spacing: 1px;
-                    span:nth-child(2){
-                        margin-left: 0.5rem;
+                    width: 16rem;
+                    ul{
+                        width: 16rem;
+                        @include clearfix;
+                        
+                        li{
+                            
+                            font-size: 1rem;
+                            color: #1B1B1B;
+                            
+                            &:nth-child(1){
+                                float: left;
+                            }
+                            &:nth-child(2){
+                                float: right;
+                            }
+                            div{              
+                                @include clearfix;
+                                margin-right: 0.6rem;
+                                padding-top: 0.2rem;
+                                a{
+                                    display: block;
+                                    float: left;
+                                    @include clearfix;
+                                    @include pos(relative);
+                                    &:nth-child(2){
+                                        margin-left: 1rem;
+                                    }
+                                    img{
+                                        width: 0.8rem;
+                                        height: 0.75rem;
+                                        float: left;
+                                        margin-right: 0.2rem;
+                                    }
+                                    span{
+                                        font-size: 0.5rem;
+                                        color: #333333;
+                                        float: left;
+                                        margin-right: 0.5rem;
+                                    }
+                                    &:nth-child(1){
+                                        margin-right: 0.5rem;
+                                    }
+                                }
+                            
+                            }
+                        }
                     }
                 }
-            }
-            &:nth-child(2){
-                float: right;
-                @include clearfix;
-                margin-right: 0.6rem;
-                margin-top: 0.9rem;
-                a{
-                    display: block;
-                    float: left;
-                    @include clearfix;
-                    @include pos(relative);
-                    &:nth-child(2){
-                        margin-left: 1rem;
-                    }
-                    img{
-                        width: 0.8rem;
-                        height: 0.75rem;
+                div{
+                   @include clearfix;
+                   p{
                         float: left;
-                        margin-right: 0.2rem;
-                    }
-                    span{
+                        font-family: PingFangSC-Light;
                         font-size: 0.5rem;
-                        color: #333333;
-                        float: left;
-                        margin-right: 0.5rem;
+                        color: #777777;
+                        letter-spacing: 0;
+                        margin-top: 0.3rem;
+                        font-family: PingFangSC-Light;
+                        letter-spacing: 1px;
                     }
-                    &:nth-child(1){
-                        margin-right: 0.5rem;
+                    ul{
+                        float: left;
+                        @include clearfix;
+                        margin-left: 0.5rem;
+                        li{
+                            float: left;
+                            font-family: PingFangSC-Light;
+                            font-size: 0.5rem;
+                            color: #777777;
+                            letter-spacing: 0;
+                            margin-top: 0.3rem;
+                            font-family: PingFangSC-Light;
+                            letter-spacing: 1px;
+                            width: 1.7rem;
+                            text-align: left;
+                            border-left: 1px solid;
+                            padding-left: 0.2rem;
+                            &:nth-child(1){
+                                border: none;
+                            }
+                            
+                        }
+                    } 
+                    &:nth-child(2){
+                        p{
+                            color: #6a9dee;
+                        }
+                        ul{
+                            li{
+                                color: #6a9dee;
+                                width: auto;
+                                a{
+                                color: #6a9dee;
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        ul{
+                            li{
+                                width: 3rem;
+                            }
+                        }
                     }
                 }
+                
             }
+            
         }
     }
     .inherit{
         width: 16rem;
         padding-top: 1.25rem;
-        .inherit_content{
-            width: calc(29.5rem/2);
-            height: calc(15.4rem/2);
-            background: #FFFFFF;
-            margin: 0 auto;
-            padding-top: 1.1rem;
-            padding-bottom: 1rem;
-            box-shadow: 0 0 20px 1px rgba(0,0,0,0.2);
-            border-radius: 0.25rem;
-            @include pos(relative);
-            overflow: hidden;
-            h4{
-                font-size: 0.65rem;
-                font-family: PingFangSC-Medium;
-                color: #333333;
-                letter-spacing: 1px;
-                font-weight: bold;
-                margin-left: 0.9rem;
-            }
-            ul{
-                width: 90%;
-                margin-left: 0.9rem;
-//              border: 1px solid;
-                li{
-                    width: 90%;
-                    @include clearfix;                   
-                    line-height: 1rem;
-                    margin-top: 1.5rem;
-                    &>div{
-                        float: left;
-                        img{
-                            width: calc(3.5rem/2);
-                            height: calc(3.5rem/2);
-                        }
-                        p:nth-child(1){
-                            font-size: 0.6rem;
-                            font-family: PingFangTC-Regular;
-                            color: #1B1B1B;
-                            letter-spacing: 0;
-                            font-weight: 600;
-                        }
-                        p:nth-child(2){
-                            font-size: 0.5rem;
-                            font-family: PingFangTC-Light;
-                            color: #777777;
-                            letter-spacing: 0;
-                        }
-                        &:nth-child(2){
-                            margin-left: 0.65rem;
-                        }
-                    }
-                }
-            }
-            .Load_la{
-                width: 90%;
-                margin: 0 auto;
-                text-align: center;
-                @include pos();
-                left: 0;
-                bottom: 0.5rem;
-                img{
-                    display: none;
-                    width: 1rem;
-                    height: 0.5rem;
-                    margin: 0 auto;
-                    margin-top: 0.5rem;
-                    &.shOp{
-                        display: block;
-                    }
-                }
-            }
-        }
         .inherit_content2{
             width: calc(29.5rem/2);
-            height: calc(10.2rem/2);
             background: #FFFFFF;
             margin: 0 auto;
             margin-top: 0.65rem;
+            padding-bottom: 0.5rem;
             h4{
                 font-family: PingFangSC-Medium;
                 font-size: 0.65rem;
@@ -446,50 +438,85 @@ html,body,.box{
                     margin-left: 0.2rem;
                 }
             }
-            .For_content{
-                font-size: 0.6rem;
-                font-family: PingFangSC-Light;
-                color: #1B1B1B;
-                letter-spacing: 1px;
-                padding: 0.8rem 0.65rem;
-            }
-            //视频
-            .viDeo2{
-                display: none;
+            .inFormation2_num{
                 width: 16rem;
-                height: 8rem;
-                margin-top: 0.6rem;
                 @include pos(relative);
-                &:first-of-type{
-                    display: block;
+                ul{
+                    width: 16rem;
+                    .swiper-slide{
+                        width: 16rem;
+                        display: none;
+                        &:first-of-type{
+                            display: block;
+                        }
+                        li{
+                            width: 16rem;
+                            //视频
+                            .viDeo2{
+                                width: 16rem;
+                                margin-top: 0.6rem;
+                                @include pos(relative);
+                                .clIck2{
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+                                    border-radius: 2.5rem;
+                                    background: rgba(0,0,0,0.30);
+                                    border: 1px solid rgba(255,255,255,0.50);
+                                    @include pos();
+                                    left: 50%;
+                                    top: 50%;
+                                    margin-left: -1.25rem;
+                                    margin-top: -1.25rem;
+                                    .triangle-right2 {
+                                        width: 0;
+                                        height: 0;
+                                        border-top: 0.5rem solid transparent;
+                                        border-left: 1rem solid #FFFFFF;
+                                        border-bottom: 0.5rem solid transparent;
+                                        opacity: 0.7;
+                                        @include pos();
+                                        left: 50%;
+                                        top: 50%;
+                                        margin-left: -0.25rem;
+                                        margin-top: -0.5rem;
+                                    }
+                                }
+                                .clIck2:hover{
+                                    background: rgba(255,255,255,0.30);
+                                }
+                            } 
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        
+                    }    
+                        
+                        
+                        
                 }
-                .clIck2{
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    border-radius: 2.5rem;
-                    background: rgba(0,0,0,0.30);
-                    border: 1px solid rgba(255,255,255,0.50);
-                    @include pos();
-                    left: 50%;
-                    top: 50%;
-                    margin-left: -1.25rem;
-                    margin-top: -1.25rem;
-                    #triangle-right2 {
-                        width: 0;
-                        height: 0;
-                        border-top: 0.5rem solid transparent;
-                        border-left: 1rem solid #FFFFFF;
-                        border-bottom: 0.5rem solid transparent;
-                        opacity: 0.7;
+                .show_num{
+                        @include clearfix;
+                        padding-bottom: 0.75rem;
                         @include pos();
-                        left: 50%;
-                        top: 50%;
-                        margin-left: -0.25rem;
-                        margin-top: -0.5rem;
-                    }
-                }
-                .clIck2:hover{
-                    background: rgba(255,255,255,0.30);
+                        bottom: 0;
+                        right: 0;
+                        span{
+                            font-family: 'PingFangSC-Light';
+                            font-size: 0.8rem;
+                            color: #FFFFFF;
+                            letter-spacing: 0;
+                            float: right;
+                            margin-top: 0.2rem;
+                            margin-left: 0.3rem;
+                            margin-right: 0.6rem;
+                        }
+                        img{
+                            width: calc(1.9rem/2);
+                            height: calc(1.7rem/2);
+                            float: right;
+                            margin-top: 0.2rem;
+                        }       
                 }
             }
             .For_h{
@@ -534,37 +561,63 @@ html,body,.box{
             }
             .picTure{
                 width: 16rem;
-                @include clearfix;
                 margin-top: 0.65rem;
-                &>div{
-                    display: none;
-                    float: left;
-                    &:nth-child(1){
-                        display: block;
-                        width: calc(21.2rem/2);
-                        height: calc(19.8rem/2);
-                    }
-                    &:nth-child(2){ 
-                        display: block;
-                        width: calc(10.6rem/2);
-                        height: calc(9.8rem/2);
-                        float: right;
-                    }
-                    &:nth-child(3){
-                        display: block;
-                        float: right;
-                        width: calc(10.6rem/2);
-                        height: calc(9.8rem/2);
-                        margin-top: calc(0.2rem/2);
-                        background: rgba(0,0,0,0.38);
-                        font-family: PingFangSC-Regular;
-                        font-size: 0.7rem;
-                        color: #FFFFFF;
-                        letter-spacing: 0;
-                        text-align: center;
-                        line-height: calc(9.8rem/2);
+                ul{
+                    width: 16rem;
+                    @include clearfix;
+                    .swiper-slide{
+                        display: none;
+                        float: left;
+                        overflow: hidden;
+                        &:nth-child(1){
+                            display: block;
+                            width: calc(21.2rem/2);
+                            height: calc(19.8rem/2);
+                        }
+                        &:nth-child(2){ 
+                            display: block;
+                            width: calc(10.6rem/2);
+                            height: calc(9.8rem/2);
+                            float: right;
+                        }
+                        &:nth-child(3){
+                            display: block;
+                            float: right;
+                            width: calc(10.6rem/2);
+                            height: calc(9.75rem/2);
+                            margin-top: calc(0.2rem/2);
+                        }
+                        li{
+                            width: 100%;
+                            height: 100%;
+     
+                            img{
+                                width: 100%;
+                            }
+                            
+                        }
                     }
                 }
+                @include pos(relative);
+                .More_num{
+                    font-family: PingFangSC-Regular;
+                    font-size: 0.7rem;
+                    color: #FFFFFF;
+                    letter-spacing: 0;
+                    text-align: center;
+                    line-height: calc(9.8rem/2);
+                    display: block;
+                    width: calc(10.6rem/2);
+                    height: calc(9.8rem/2);
+                    @include pos();
+                    left: 10.7rem;
+                    top: 5rem;
+                    background: rgba(0,0,0,0.38);
+                    b{
+                        font-weight: 500;
+                    }
+                }
+                
             }
             .For_content3{
                 font-family: PingFangSC-Light;
@@ -579,6 +632,7 @@ html,body,.box{
             width: 16rem;
             @include clearfix;
             margin-top: 1.5rem;
+           
             h3{
                 font-size: 0.7rem;
                 font-family: PingFangSC-Medium;
@@ -594,18 +648,63 @@ html,body,.box{
                     margin-left: 0.2rem;
                 }
             }
-            .picTure2{
-                width: calc(32rem/2);
-                height: calc(16.1rem/2);
+            .banner_image{
+                width: 16rem;
                 @include pos(relative);
-                margin-top: 0.6rem;
-                display: none;
-                &:first-of-type{
-                    display: block;
+                ul{
+                    width: 16rem;
+                    .swiper-slide{
+                        width: 16rem;
+                        display: none;
+                        &:first-of-type{
+                            display: block;
+                        }
+                        li{
+                            width: 16rem;
+                            //视频
+                            .viDeo2{
+                                width: 16rem;
+                                margin-top: 0.6rem;
+                                @include pos(relative);
+                                .clIck2{
+                                    width: 2.5rem;
+                                    height: 2.5rem;
+                                    border-radius: 2.5rem;
+                                    background: rgba(0,0,0,0.30);
+                                    border: 1px solid rgba(255,255,255,0.50);
+                                    @include pos();
+                                    left: 50%;
+                                    top: 50%;
+                                    margin-left: -1.25rem;
+                                    margin-top: -1.25rem;
+                                    .triangle-right2 {
+                                        width: 0;
+                                        height: 0;
+                                        border-top: 0.5rem solid transparent;
+                                        border-left: 1rem solid #FFFFFF;
+                                        border-bottom: 0.5rem solid transparent;
+                                        opacity: 0.7;
+                                        @include pos();
+                                        left: 50%;
+                                        top: 50%;
+                                        margin-left: -0.25rem;
+                                        margin-top: -0.5rem;
+                                    }
+                                }
+                                .clIck2:hover{
+                                    background: rgba(255,255,255,0.30);
+                                }
+                            } 
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        
+                    } 
                 }
-                div{
+            }
+            .show_num{
                     @include clearfix;
-//                  border: 1px solid;
                     padding-bottom: 0.75rem;
                     @include pos();
                     bottom: 0;
@@ -625,9 +724,12 @@ html,body,.box{
                         height: calc(1.7rem/2);
                         float: right;
                         margin-top: 0.2rem;
-                    }
-                }
+                    }       
             }
+            
+            
+            
+            
             .For_h2{
                 font-family: PingFangSC-Light;
                 font-size: 0.5rem;
@@ -702,7 +804,7 @@ html,body,.box{
         @include pos(fixed);
         right: 50%;
         margin-right: calc(-28.6rem/4);
-        bottom: calc(9.7rem/2);
+        bottom: calc(2.8rem/2);
         span{
             display: block;
             @extend %full;
@@ -756,7 +858,7 @@ html,body,.box{
         @include pos(fixed);
         right: 50%;
         margin-right: calc(-28.6rem/4);
-        bottom: calc(9.7rem/2);
+        bottom: calc(2.7rem/2);
         a{
             display: block;
             @extend %full;
@@ -805,6 +907,150 @@ html,body,.box{
         top: 2.3rem;
         z-index: 9999;
     }
+
+    
+.box_layer{
+    width: 16rem;
+    height: 100%;
+    @include pos(fixed);
+    left: 50%;
+    margin-left: -8rem;
+    top: 0;
+    background: #333333;
+    button{
+        @include pos();
+        left: 14rem;
+        top: 3rem;
+        z-index: 999;
+        outline: none;
+        border: none;
+        background: none;
+        color: #FFFFFF;
+        font-size: 0.5rem;
+    }
+    .box_layer_content{
+        width: 16rem;
+        height: 90%;
+        background: #333333;
+        margin: 0 auto;
+        @include pos(relative);
+        overflow: hidden;
+        .swiper-banner-Lu-back{
+            width: 16rem;
+            @include pos();
+            left: 0;
+            top: calc(10.5rem/2);
+            .swiper-wrapper{
+                width: 100%;
+                li{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                    //视频
+                    .viDeo2{
+                        width: 16rem;
+                        margin-top: 0.6rem;
+                        @include pos(relative);
+                        .clIck2{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius: 2.5rem;
+                            background: rgba(0,0,0,0.30);
+                            border: 1px solid rgba(255,255,255,0.50);
+                            @include pos();
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -1.25rem;
+                            margin-top: -1.25rem;
+                            .triangle-right2 {
+                                width: 0;
+                                height: 0;
+                                border-top: 0.5rem solid transparent;
+                                border-left: 1rem solid #FFFFFF;
+                                border-bottom: 0.5rem solid transparent;
+                                opacity: 0.7;
+                                @include pos();
+                                left: 50%;
+                                top: 50%;
+                                margin-left: -0.25rem;
+                                margin-top: -0.5rem;
+                            }
+                        }
+                        .clIck2:hover{
+                            background: rgba(255,255,255,0.30);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .back_Slide{
+        width: 16rem;
+        height: calc(7.8rem/2);
+        background: #1c1c20;
+        @include pos();
+        left: 50%;
+        margin-left: calc(-16rem/2);
+        bottom: 0;
+        .banner{
+            width: calc(27.5rem/2);
+            height: calc(6.3rem/2);
+            margin: 0.6rem auto;
+            overflow: hidden;
+            .swiper-banner-Lu{
+                width: 100%;
+                .swiper-wrapper{
+                    width: 100%;
+                    .swiper-slide{
+                        width: calc(6.4rem/2);
+                        height: calc(5.9rem/2);
+                        li{
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                            }
+                            //视频
+                            .viDeo2{
+                                width: 100%;
+                                @include pos(relative);
+                                .clIck2{
+                                    width: 1rem;
+                                    height: 1rem;
+                                    border-radius: 1rem;
+                                    background: rgba(0,0,0,0.30);
+                                    border: 1px solid rgba(255,255,255,0.50);
+                                    @include pos();
+                                    left: 50%;
+                                    top: 50%;
+                                    margin-left: -0.5rem;
+                                    margin-top: -0.5rem;
+                                    .triangle-right2 {
+                                        width: 0;
+                                        height: 0;
+                                        border-top: 0.2rem solid transparent;
+                                        border-left: 0.4rem solid #FFFFFF;
+                                        border-bottom: 0.2rem solid transparent;
+                                        opacity: 0.7;
+                                        @include pos();
+                                        left: 50%;
+                                        top: 50%;
+                                        margin-left: -0.1rem;
+                                        margin-top: -0.2rem;
+                                    }                                               
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 

@@ -10,8 +10,6 @@
 				<h3>{{getContent contentFragmentList 4}}</h3>
 				<div>
 					<a href="javascript:;">
-						<img src="assets/iocn/share.png" />
-						<span>238</span>
 					</a>
 					<a href="javascript:;">
 						<img src="assets/iocn/Fill 1.png" />

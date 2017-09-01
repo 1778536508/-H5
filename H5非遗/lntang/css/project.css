@@ -233,6 +233,8 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
         .content .forma_duce > div:nth-child(1) div:nth-child(2) ul li {
           color: #6a9dee;
           width: auto; }
+          .content .forma_duce > div:nth-child(1) div:nth-child(2) ul li a {
+            color: #6a9dee; }
         .content .forma_duce > div:nth-child(1) div:nth-child(3) ul li {
           width: 3rem; }
   .content .inherit {
@@ -549,7 +551,7 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
               height: 100%; }
               .content .content_box .inFormation3 .picTure ul .swiper-slide li img {
                 width: 100%; }
-        .content .content_box .inFormation3 .picTure span {
+        .content .content_box .inFormation3 .picTure .More_num {
           font-family: PingFangSC-Regular;
           font-size: 0.7rem;
           color: #FFFFFF;
@@ -563,7 +565,7 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
           left: 10.7rem;
           top: 5rem;
           background: rgba(0, 0, 0, 0.38); }
-          .content .content_box .inFormation3 .picTure span b {
+          .content .content_box .inFormation3 .picTure .More_num b {
             font-weight: 500; }
       .content .content_box .inFormation3 .For_content3 {
         font-family: PingFangSC-Light;
@@ -716,7 +718,7 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
   position: fixed;
   right: 50%;
   margin-right: calc(-28.6rem/4);
-  bottom: calc(9.7rem/2); }
+  bottom: calc(2.8rem/2); }
   #gong .menu span {
     display: block; }
 #gong .Catalog {
@@ -754,7 +756,7 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
   position: fixed;
   right: 50%;
   margin-right: calc(-28.6rem/4);
-  bottom: calc(9.7rem/2); }
+  bottom: calc(2.7rem/2); }
   #gong .Return a {
     display: block; }
 #gong .add {
@@ -792,7 +794,8 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
   width: 16rem;
   height: 100%;
   position: fixed;
-  left: 0;
+  left: 50%;
+  margin-left: -8rem;
   top: 0;
   background: #333333; }
   .box_layer button {
@@ -803,49 +806,55 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
     outline: none;
     border: none;
     background: none;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-size: 0.5rem; }
   .box_layer .box_layer_content {
     width: 16rem;
     height: 90%;
     background: #333333;
     margin: 0 auto;
-    position: relative; }
-    .box_layer .box_layer_content .back_img {
+    position: relative;
+    overflow: hidden; }
+    .box_layer .box_layer_content .swiper-banner-Lu-back {
       width: 16rem;
       position: absolute;
       left: 0;
       top: calc(10.5rem/2); }
-      .box_layer .box_layer_content .back_img img {
+      .box_layer .box_layer_content .swiper-banner-Lu-back .swiper-wrapper {
         width: 100%; }
-      .box_layer .box_layer_content .back_img .viDeo2 {
-        width: 16rem;
-        margin-top: 0.6rem;
-        position: relative; }
-        .box_layer .box_layer_content .back_img .viDeo2 .clIck2 {
-          width: 2.5rem;
-          height: 2.5rem;
-          border-radius: 2.5rem;
-          background: rgba(0, 0, 0, 0.3);
-          border: 1px solid rgba(255, 255, 255, 0.5);
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          margin-left: -1.25rem;
-          margin-top: -1.25rem; }
-          .box_layer .box_layer_content .back_img .viDeo2 .clIck2 .triangle-right2 {
-            width: 0;
-            height: 0;
-            border-top: 0.5rem solid transparent;
-            border-left: 1rem solid #FFFFFF;
-            border-bottom: 0.5rem solid transparent;
-            opacity: 0.7;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin-left: -0.25rem;
-            margin-top: -0.5rem; }
-        .box_layer .box_layer_content .back_img .viDeo2 .clIck2:hover {
-          background: rgba(255, 255, 255, 0.3); }
+        .box_layer .box_layer_content .swiper-banner-Lu-back .swiper-wrapper li {
+          width: 100%; }
+          .box_layer .box_layer_content .swiper-banner-Lu-back .swiper-wrapper li img {
+            width: 100%; }
+          .box_layer .box_layer_content .swiper-banner-Lu-back .swiper-wrapper li .viDeo2 {
+            width: 16rem;
+            margin-top: 0.6rem;
+            position: relative; }
+            .box_layer .box_layer_content .swiper-banner-Lu-back .swiper-wrapper li .viDeo2 .clIck2 {
+              width: 2.5rem;
+              height: 2.5rem;
+              border-radius: 2.5rem;
+              background: rgba(0, 0, 0, 0.3);
+              border: 1px solid rgba(255, 255, 255, 0.5);
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              margin-left: -1.25rem;
+              margin-top: -1.25rem; }
+              .box_layer .box_layer_content .swiper-banner-Lu-back .swiper-wrapper li .viDeo2 .clIck2 .triangle-right2 {
+                width: 0;
+                height: 0;
+                border-top: 0.5rem solid transparent;
+                border-left: 1rem solid #FFFFFF;
+                border-bottom: 0.5rem solid transparent;
+                opacity: 0.7;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -0.25rem;
+                margin-top: -0.5rem; }
+            .box_layer .box_layer_content .swiper-banner-Lu-back .swiper-wrapper li .viDeo2 .clIck2:hover {
+              background: rgba(255, 255, 255, 0.3); }
   .box_layer .back_Slide {
     width: 16rem;
     height: calc(7.8rem/2);
@@ -898,7 +907,5 @@ html, body, .box, .box_list ul li a img, #gong .menu span, #gong .menu span img,
                     top: 50%;
                     margin-left: -0.1rem;
                     margin-top: -0.2rem; }
-                .box_layer .back_Slide .banner .swiper-banner-Lu .swiper-wrapper .swiper-slide li .viDeo2 .clIck2:hover {
-                  background: rgba(255, 255, 255, 0.3); }
 
 /*# sourceMappingURL=project.css.map */

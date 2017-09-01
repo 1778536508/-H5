@@ -95,7 +95,7 @@
 	    	
 },100)
 setTimeout(function(){	
-	var mySwiper = new Swiper('.swiper-banner-Lu',{
+	var mySwiper1 = new Swiper('.swiper-banner-Lu',{
 		prevButton:'.swiper-button-prev',
 		nextButton:'.swiper-button-next',
 		slidesPerView : 4,
@@ -104,5 +104,22 @@ setTimeout(function(){
 		speed:500,
 		autoplayDisableOnInteraction : false
 	})
+	var mySwiper2 = new Swiper('.swiper-banner-Lu-back',{
+		
+		effect : 'coverflow',
+		slidesPerView: 6,
+		centeredSlides: true,
+		slidesPerView : 1,
+		loop: false,
+		speed:500,
+		autoplayDisableOnInteraction : false
+	})
+	mySwiper1.params.control = mySwiper2;//需要在Swiper2初始化后，Swiper1控制Swiper2
+	mySwiper2.params.control = mySwiper1;//需要在Swiper1初始化后，Swiper2控制Swiper1
+//	var mySwiper3 = new Swiper('#swiper-container3',{
+//		control: [mySwiper1, mySwiper2],//控制前面两个Swiper
+//	})
+	
+	
 },10)
 

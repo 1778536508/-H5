@@ -1,7 +1,4 @@
 $(function () {
-	
-	
-
 	//header
 	var str_header = '<header>'+
 						'<a href="javascript:;" class="left">'+
@@ -17,11 +14,6 @@ $(function () {
 					'</header>';
 	$('#box_header').append(str_header);
 	
-	
-	
-
-
-
 	//小功能
 	var str ='<div class="menu" id="menu">'+
 				'<span>'+
@@ -44,20 +36,8 @@ $(function () {
 					'<img src="assets/iocn/Return.png"/>'+
 				'</a>'+
 			'</div>'+
-			'<div class="add">'+
-				'<span>'+
-					'<img src="assets/iocn/add.png"/>'+
-				'</span>'+
-			'</div>'+
-			'<div class="cover" id="cover"></div>';
-			
+			'<div class="cover" id="cover"></div>';			
 		$('#gong').append(str);
-		
-
-		
-		
-		
-		
 		
 		//判断用户是否使用微信浏览器
 		$(function(){
@@ -76,6 +56,8 @@ $(function () {
 				$('#Three_Stage_Classification').css('top','0');
 				$('#Mosaic').css('top','0');
 				$('#Catalog').css('top','0');
+				$('#Close').css('top','1rem');
+				$('#banner_back').css('top','calc(-4.5rem/2)');
 			}
 		})
 		function isWeixin(){
@@ -424,49 +406,71 @@ $(function () {
 		console.log(barNum);
 		for(var i=0; i<barNum.length; i++){
 			var strNum = $(barNum[i]).parent().parent().children('ul').children('div').length;
-//			console.log(strNum);
 			$(barNum[i]).text(strNum);
+			var oDiv = $(barNum[i]).parent().parent().children('ul').children('div');
+			if(strNum == 1){
+				oDiv.css({
+					'width':'16rem',
+					'height':'auto'
+				});
+				$('.numBerStr').parent().parent().children('b').css('display','none');
+			}
+			if(strNum == 2){
+				oDiv.css({
+					'width':'7.9rem',
+					'height':'auto',
+					'padding-left':'0.1rem'
+					});
+				oDiv.eq(0).css({
+					'padding-left':'0'
+				})
+				$('.numBerStr').parent().parent().children('b').css('display','none');
+			}
+			
+			
+			
+			
 		}
 		
 		//隐藏图片展示层
 		$('#box_layer').hide();
+		//引入文件
+		var script_src = '<script src="assets/js/banner.js" type="text/javascript" charset="utf-8"></script>';
 		//点击显示
 		$('.link').click(function(){
 			var uLi = $(this).html();
 //			console.log(uLi);
 			$('#swiper-wrapper-append').html(uLi);
+			$('#banner_back').html(uLi);
 			$('#box_layer').fadeIn(500);
-			var script_src = '<script src="assets/js/banner.js" type="text/javascript" charset="utf-8"></script>';
 			$('body').append(script_src);
 			stop();
 			vide();
 		})
+		//点击更多数量
+		$('.More_num').click(function(){
+			var More = $(this).parent().children('ul').html();
+//			var More_li = $(this).parent().clone(true).find('ul li').get(0);
+			$('#swiper-wrapper-append').html(More);
+			$('#box_layer').fadeIn(500);
+			$('body').append(script_src);
+			
+			$('#banner_back').html(More);
+			stop();
+		})
+		
+		
+		
 		//关闭
 		$('#Close').click(function(){
 			$('#box_layer').fadeOut();
 			$('body>script').remove();
+			move();
 		})
-		
-		//默认显示当前点击的图片
-		var line = $('.link');
-		for(var i = 0; i< line.length; i++){
-			$(line[i]).on('click','li',function(){
-				var ult = $(this).html();
-				$('#back_img').html(ult);
-			})
-		}
-		
-		
-		//图片展示
-		$('#swiper-wrapper-append').on('click','li',function(){
-			$('#back_img').html($(this).html());
-			vide();
-		})
-		
 		
 		function vide(){
 			//视频按钮
-		    $('#back_img >').on('click','.clIck2',function(){
+		    $('#banner_back >').on('click','.clIck2',function(){
 		    	$(this).css('display','none');
 		    	var this_Div = $(this);
 		    	var vide_Div = $(this).prev();

@@ -209,6 +209,7 @@ html,body,.box{
                             
                             font-size: 1rem;
                             color: #1B1B1B;
+                            
                             &:nth-child(1){
                                 float: left;
                             }
@@ -280,6 +281,7 @@ html,body,.box{
                             &:nth-child(1){
                                 border: none;
                             }
+                            
                         }
                     } 
                     &:nth-child(2){
@@ -290,6 +292,9 @@ html,body,.box{
                             li{
                                 color: #6a9dee;
                                 width: auto;
+                                a{
+                                color: #6a9dee;
+                                }
                             }
                         }
                     }
@@ -668,7 +673,7 @@ html,body,.box{
                     }
                 }
                 @include pos(relative);
-                span{
+                .More_num{
                     font-family: PingFangSC-Regular;
                     font-size: 0.7rem;
                     color: #FFFFFF;
@@ -873,7 +878,7 @@ html,body,.box{
         @include pos(fixed);
         right: 50%;
         margin-right: calc(-28.6rem/4);
-        bottom: calc(9.7rem/2);
+        bottom: calc(2.8rem/2);
         span{
             display: block;
             @extend %full;
@@ -927,7 +932,7 @@ html,body,.box{
         @include pos(fixed);
         right: 50%;
         margin-right: calc(-28.6rem/4);
-        bottom: calc(9.7rem/2);
+        bottom: calc(2.7rem/2);
         a{
             display: block;
             @extend %full;
@@ -981,7 +986,8 @@ html,body,.box{
     width: 16rem;
     height: 100%;
     @include pos(fixed);
-    left: 0;
+    left: 50%;
+    margin-left: -8rem;
     top: 0;
     background: #333333;
     button{
@@ -993,6 +999,7 @@ html,body,.box{
         border: none;
         background: none;
         color: #FFFFFF;
+        font-size: 0.5rem;
     }
     .box_layer_content{
         width: 16rem;
@@ -1000,49 +1007,56 @@ html,body,.box{
         background: #333333;
         margin: 0 auto;
         @include pos(relative);
-        .back_img{
+        overflow: hidden;
+        .swiper-banner-Lu-back{
             width: 16rem;
             @include pos();
             left: 0;
             top: calc(10.5rem/2);
-            
-            img{
+            .swiper-wrapper{
                 width: 100%;
-            }
-            //视频
-            .viDeo2{
-                width: 16rem;
-                margin-top: 0.6rem;
-                @include pos(relative);
-                .clIck2{
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    border-radius: 2.5rem;
-                    background: rgba(0,0,0,0.30);
-                    border: 1px solid rgba(255,255,255,0.50);
-                    @include pos();
-                    left: 50%;
-                    top: 50%;
-                    margin-left: -1.25rem;
-                    margin-top: -1.25rem;
-                    .triangle-right2 {
-                        width: 0;
-                        height: 0;
-                        border-top: 0.5rem solid transparent;
-                        border-left: 1rem solid #FFFFFF;
-                        border-bottom: 0.5rem solid transparent;
-                        opacity: 0.7;
-                        @include pos();
-                        left: 50%;
-                        top: 50%;
-                        margin-left: -0.25rem;
-                        margin-top: -0.5rem;
+                li{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                    //视频
+                    .viDeo2{
+                        width: 16rem;
+                        margin-top: 0.6rem;
+                        @include pos(relative);
+                        .clIck2{
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            border-radius: 2.5rem;
+                            background: rgba(0,0,0,0.30);
+                            border: 1px solid rgba(255,255,255,0.50);
+                            @include pos();
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -1.25rem;
+                            margin-top: -1.25rem;
+                            .triangle-right2 {
+                                width: 0;
+                                height: 0;
+                                border-top: 0.5rem solid transparent;
+                                border-left: 1rem solid #FFFFFF;
+                                border-bottom: 0.5rem solid transparent;
+                                opacity: 0.7;
+                                @include pos();
+                                left: 50%;
+                                top: 50%;
+                                margin-left: -0.25rem;
+                                margin-top: -0.5rem;
+                            }
+                        }
+                        .clIck2:hover{
+                            background: rgba(255,255,255,0.30);
+                        }
                     }
                 }
-                .clIck2:hover{
-                    background: rgba(255,255,255,0.30);
-                }
             }
+
         }
     }
 
@@ -1101,9 +1115,6 @@ html,body,.box{
                                         margin-left: -0.1rem;
                                         margin-top: -0.2rem;
                                     }                                               
-                                }
-                                .clIck2:hover{
-                                    background: rgba(255,255,255,0.30);
                                 }
                             }
                         }

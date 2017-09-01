@@ -4,7 +4,7 @@ $(function () {
         if ($(window).scrollTop()>10){
         	$('#Return').fadeIn(100);
             $('#menu').css({
-            	'bottom':'calc(13.7rem/2)',
+            	'bottom':'calc(6.4rem/2)',
             	'-webkit-transition':'all 0.1s'
             });
             $('#box_list').hide(100);
@@ -13,7 +13,7 @@ $(function () {
             $('#Return').fadeOut(100);
             setTimeout(function(){
             	$('#menu').css({
-	            	'bottom':'calc(9.7rem/2)',
+	            	'bottom':'calc(2.8rem/2)',
 	            	'-webkit-transition':'all 0.2s'
 	            });
             },200)
