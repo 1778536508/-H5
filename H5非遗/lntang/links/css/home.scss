@@ -24,6 +24,7 @@ html{
 html,body,.box{
     @extend %full;
     margin: 0 auto;
+//  background: #eeeeee;
 }
 
 
@@ -125,7 +126,8 @@ html,body,.box{
     //幻灯片
     .banner{
         width: 16rem;
-//      margin-top: 1.42rem;
+        height: 8rem;
+        overflow: hidden;
         @include pos(relative);
         z-index: 1;
         .swiper-container{
@@ -136,7 +138,8 @@ html,body,.box{
                     width: 100%;
                     @include pos(relative);
                     img{
-                        width: 100%;
+                        width: 120%;
+                        margin-left: -2rem;
                     }
                     span{
                         color: #b1b1b1;
@@ -229,22 +232,23 @@ html,body,.box{
     //分类
     .list{
         width: 16rem;
-        height: 5rem;
         @include pos(relative);
         overflow: hidden;
+        padding-bottom: 1rem;
         .swiper-list{
             width: 100%;
             .swiper-wrapper{
                 width: 100%;
                 .swiper-slide{
-                    width: 100%;
-                    @include clearfix;
+                    width: 100%;;
                     padding-top: 0.9rem;
+                    display: flex;
                     a{
+                        -webkit-flex-grow: 1;
                         display: block;
                         width: calc(16rem/3);
                         text-align: center;
-                        float: left;
+                        padding: 0.5rem;
                         img{
                             width: 1.5rem;
                             height: 1.4rem;
@@ -252,6 +256,10 @@ html,body,.box{
                         span{
                             display: block;
                             font-size: 0.5rem;
+                            color: #000000;
+                            &:nth-child(3){
+                                color: #777777;
+                            }
                         }
                     }
                 }
@@ -265,7 +273,13 @@ html,body,.box{
             width: 16rem;
             li{
                 width: 16rem;
-                height: calc(30rem/2);
+                height: calc(27rem/2);
+                &:nth-child(6){
+                    display: none;
+                }
+                &:nth-child(7){
+                    display: none;
+                }
                 .forma_imaGes{
                     width: 16rem;
                     height: 10rem;
@@ -284,15 +298,16 @@ html,body,.box{
                 }
                 .forma_duce{
                     width: 16rem;
-                    @include clearfix;
+                    @include pos(relative);
                     &>div{
                         &:nth-child(1){
                             margin-left: 0.55rem;
                             margin-top: 0.5rem;
-                            float: left;
                             h3{
-                                font-size: 1rem;
+                                font-size: 0.7rem;
                                 color: #1B1B1B;
+                                display: inline-block;
+                                font-weight: 500;
                             }
                             p{
                                 font-size: 0.5rem;
@@ -301,13 +316,14 @@ html,body,.box{
                             }
                         }
                         &:nth-child(2){
-                            float: right;
-                            @include clearfix;
+                            @include pos();
+                            right: 0;
+                            top: -0.6rem;
+                            bottom: calc(3rem/2);
                             margin-right: 0.6rem;
                             margin-top: 0.9rem;
                             a{
                                 display: block;
-                                float: left;
                                 @include clearfix;
                                 @include pos(relative);
                                 &:nth-child(2){
@@ -476,7 +492,74 @@ html,body,.box{
         top: 0;
         z-index: 1;
     }
+    //非遗名目
+    .name_list{
+        width: 16rem;
+        height: 100%;
+        @include pos(fixed);
+        left: 50%;
+        margin-left: -8rem;
+        top: 5.6rem;
+        background: rgba(0,0,0,0.86);
+        z-index: 900;
+        display: none;
+        overflow: scroll;
+        ul{
+            width: 100%;
+            @include clearfix;
+            overflow: hidden;
+            li{
+                float: left;
+                margin-left: calc(3rem/2);
+                margin-top: 0.8rem;
+                a{
+                    font-size: calc(1.1rem/2);
+                    color: rgba(255,255,255,0.6);
+                    &.blue_fef{
+                        color: #6c9fef;
+                    }
+                }
+                &:nth-child(1){
+                    width: 16rem;
+                    margin-top: calc(1.6rem/2);
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(6){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(14){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(20){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(32){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            p{
+                float: left;
+                height: 9rem;
+            }
+        }
+    }
 }
+
+
 
 
 

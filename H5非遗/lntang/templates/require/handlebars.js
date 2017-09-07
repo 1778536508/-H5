@@ -2769,4 +2769,4 @@ Handlebars.template = Handlebars.VM.template;
 	})
 	
 })();
-;
+

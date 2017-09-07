@@ -52,6 +52,7 @@ $(function () {
     	location.href = 'search.html';
     	var val_inp = $('#Text_inp').val();
     	localStorage.setItem('val',val_inp);
+    	Clear_data();
     })
     
     $('#val_rem').click(function(){
@@ -70,6 +71,19 @@ $(function () {
 		}
 		
     },100)
+    
+    
+    //清除本地存储
+	function Clear_data(){
+		 localStorage.removeItem('key');
+		 localStorage.removeItem('cate');
+		 localStorage.removeItem('code');
+		 localStorage.removeItem('page');
+		 localStorage.removeItem('search_total');
+		 localStorage.removeItem('type');
+	}
+    
+    
     
 });
 

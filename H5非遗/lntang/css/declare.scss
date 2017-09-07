@@ -326,4 +326,69 @@ html,body,.box{
         top: 0;
         z-index: 1;
     }
+    //非遗名目
+    .name_list{
+        width: 16rem;
+        height: 100%;
+        @include pos(fixed);
+        left: 50%;
+        margin-left: -8rem;
+        top: 5.6rem;
+        background: rgba(0,0,0,0.86);
+        z-index: 900;
+        display: none;
+        overflow: scroll;
+        ul{
+            width: 100%;
+            @include clearfix;
+            overflow: hidden;
+            li{
+                float: left;
+                margin-left: calc(3rem/2);
+                margin-top: 0.8rem;
+                a{
+                    font-size: calc(1.1rem/2);
+                    color: rgba(255,255,255,0.6);
+                    &.blue_fef{
+                        color: #6c9fef;
+                    }
+                }
+                &:nth-child(1){
+                    width: 16rem;
+                    margin-top: calc(1.6rem/2);
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(6){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(14){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(20){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+                &:nth-child(32){
+                    width: 16rem;
+                    a{
+                        color: #FFFFFF;
+                    }
+                }
+            }
+            p{
+                float: left;
+                height: 9rem;
+            }
+        }
+    }
 }

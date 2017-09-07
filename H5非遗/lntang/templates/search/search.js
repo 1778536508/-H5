@@ -21,9 +21,11 @@ define(["text!search/search.tpl"], function(testTpl) {
 		
 		//进入搜索页面搜索
 		setTimeout(function(){
-			Clear_data();
+//			Clear_data();
+			stop();
 			$('#Load_none').css('display','block');
 			setTimeout(function(){
+				move();
 				$('#Load_none').css('display','none');
 			},1000);
 			$('#p_content').css('display', 'none');
@@ -72,14 +74,18 @@ define(["text!search/search.tpl"], function(testTpl) {
 			
 			//搜索
 			$('#sou').click(function() {
+				
+				stop();
 				$('#Load_none').css('display','block');
 				setTimeout(function(){
+					move();
 					$('#Load_none').css('display','none');
 				},1000);
 				$('#p_content').css('display', 'none');
 				localStorage.setItem('page', num);
 				//获取关键字
 				var val = $('#search_text').val();
+				localStorage.setItem('val',val);
 				//每次搜索num=1
 				num = 1;
 				//每页的数量
@@ -101,14 +107,17 @@ define(["text!search/search.tpl"], function(testTpl) {
 				var code = arr_Code[j-1];
 				localStorage.setItem('code',code);
 				var type = localStorage.getItem('type');
+				Clear_data();
 				ajaxData(val, offnum, limnum, num, cate, code, type);			
 			});
 			
 	
 			//确定筛选
 			$('#btn').click(function(){
+				stop();
 				$('#Load_none').css('display','block');
 				setTimeout(function(){
+					move();
 					$('#Load_none').css('display','none');
 				},1000);
 				$('#paging').css('display', 'block');
@@ -172,11 +181,13 @@ define(["text!search/search.tpl"], function(testTpl) {
 			
 			//重置
 			$('#reset').click(function(){
+				
 				resetClass();
 				Clear_data();
 				$('#Load_none').css('display','block');
 				setTimeout(function(){
 					$('#Load_none').css('display','none');
+					$('#p_content').text('重置成功');
 				},1000);
 				$('#p_content').css('display', 'none');
 				
@@ -246,6 +257,11 @@ define(["text!search/search.tpl"], function(testTpl) {
 					delete condition.keyword;
 					$('#p_content').css('display', 'block');
 					$('#paging').css('display','none');
+				}
+				
+				if(val == "" && (cate == "undefined" || cate == null || cate == undefined || cate == 0) && (code == "undefined" || code == undefined || code == "" || code == null) && (type == null || type == "null" || type == undefined)){
+					$('#paging').css('display','none');
+					$('#search_content').css('display', 'block');
 					return;
 				}
 				
@@ -339,7 +355,7 @@ define(["text!search/search.tpl"], function(testTpl) {
 							$(valList[i]).text('#'+getCategoryTextById($(valList[i]).attr('data_list_p')));
 						}
 						
-						
+						forma_Load();
 					},
 					error: function(error) {
 						$('#p_content').css('display', 'block');
@@ -437,6 +453,46 @@ define(["text!search/search.tpl"], function(testTpl) {
 			        document.body.style.overflow='';//出现滚动条
 			        document.removeEventListener("touchmove",mo,false);        
 			}
+			
+			//search最多显示h3
+			function forma_Load(){
+			  var forma_h3 = $('.forma_duce_float');
+			  for(var i = 0; i<forma_h3.length; i++){
+			  		var str = $(forma_h3[i]).children('h3').html();
+			  		console.log(str);
+					var s = str;
+					if(str.length>10){
+						s = str.substring(0,10)+'...';
+					}
+					$(forma_h3[i]).children('h3').html(s);
+			  }
+			}
+			
+			
+			
+			//搜索喜欢
+		    $('#forma_pics').on('click','a',function(){
+		    	var num = parseInt($(this).children('span').text());
+		    	
+		    	if($(this).children('img').eq(1).css('display') == 'none'){
+		    		$(this).children('img').eq(0).css('display','none');
+		    		$(this).children('img').eq(1).css('display','block');
+		    		$(this).children('span').text(num+1);
+		    	}else{
+		    		$(this).children('img').eq(0).css('display','block');
+		    		$(this).children('img').eq(1).css('display','none');
+		    		if(num > 0){
+		    			$(this).children('span').text(num-1);
+		    		}else{
+		    			$(this).children('span').text(0);
+		    		}
+		    		
+		    	}
+		    	
+		    })
+			
+			
+			
 			
 	}
 	

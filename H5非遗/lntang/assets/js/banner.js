@@ -63,7 +63,7 @@
 //				effect : 'cube',
 				
 				//淡入淡出效果
-				effect : 'fade',
+//				effect : 'fade',
 				
 				//3D折页效果
 //				effect : 'coverflow',
@@ -85,7 +85,7 @@
 				loop: false,
 				
 				//持续时间
-				speed:1000,
+				speed:500,
 
 				//触摸后轮播不停止(为false时,默认停止位true)
 				autoplayDisableOnInteraction : false
@@ -105,20 +105,18 @@ setTimeout(function(){
 		autoplayDisableOnInteraction : false
 	})
 	var mySwiper2 = new Swiper('.swiper-banner-Lu-back',{
-		
-		effect : 'coverflow',
-		slidesPerView: 6,
-		centeredSlides: true,
-		slidesPerView : 1,
+		pagination : '.swiper-pagination',
+		paginationClickable :true,
+//		effect : 'coverflow',
+//		centeredSlides: true,
+//		slidesPerView : 1,
 		loop: false,
 		speed:500,
 		autoplayDisableOnInteraction : false
 	})
 	mySwiper1.params.control = mySwiper2;//需要在Swiper2初始化后，Swiper1控制Swiper2
 	mySwiper2.params.control = mySwiper1;//需要在Swiper1初始化后，Swiper2控制Swiper1
-//	var mySwiper3 = new Swiper('#swiper-container3',{
-//		control: [mySwiper1, mySwiper2],//控制前面两个Swiper
-//	})
+
 	
 	
 },10)
