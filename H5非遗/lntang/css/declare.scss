@@ -116,6 +116,66 @@ html,body,.box{
     }
 }
 
+ //搜索
+.content_search{
+    width: 16rem;
+    height: calc(4.9rem/2);
+    margin: 0 auto;
+    background: #F5F6F8;
+    z-index: 2;
+    @include pos(relative);
+    //菜单
+    .banner_remove{
+        @include pos();
+        top: 0.6rem;
+        right: calc(2.1rem/2);
+        z-index: 1;
+        a{
+            display: block;
+            @include clearfix;
+            margin-top: 0.3rem;
+            margin-right: 0.1rem;
+            img{
+                width: calc(1rem/2);
+                height: calc(1rem/2);
+                margin-left: 0.5rem; 
+                float: left;
+                margin-top: 0.15rem;
+            }
+            span{
+                font-size: 0.5rem;
+                float: left;
+                
+            }
+        }
+    }
+    
+    
+    //搜索
+    .banner_search{
+        z-index: 1;
+        input[type='text']{
+            padding-left: calc(2.1rem/2);
+            width: calc(16rem-2.1rem/2);
+            height: calc(4.9rem/2); 
+            border: none;
+            outline: none;
+            background-color:transparent;
+            font-size: calc(1.2rem/2);
+            color: #777777;
+            z-index: 1;
+        }
+        input[type='image']{
+            @include pos();
+            right: calc(5.6rem/2);
+            top: calc(2rem/2);
+            width: calc(1.2rem/2);
+            height: calc(1.2rem/2);
+            outline: none;
+            z-index: 1;
+        }
+    }
+}
 
 
 .content{
@@ -123,65 +183,9 @@ html,body,.box{
     width: 16rem;
     background: #f5f6f8;
     @include pos(relative);
-    //搜索
-    .content_search{
-    //  display: none;
-        width: 16rem;
-        height: calc(4.9rem/2);
-        background: rgba(245,246,248,0.2);
-        @include pos();
-        left: 0;
-        top: 0;
-        z-index: 2;
-        //菜单
-        .banner_remove{
-            @include pos();
-            top: 0.6rem;
-            right: calc(2.1rem/2);
-            z-index: 1;
-            a{
-                display: block;
-                img{
-                    width: calc(1.3rem/2);
-                    height: calc(1.4rem/2);
-                    margin-left: 0.1rem;
-                }
-                span{
-                    
-                }
-            }
-        }
-        
-        
-        //搜索
-        .banner_search{
-            z-index: 1;
-            input[type='text']{
-                padding-left: calc(2.1rem/2);
-                width: calc(16rem-2.1rem/2);
-                height: calc(4.9rem/2); 
-                border: none;
-                outline: none;
-                background-color:transparent;
-    //              border-bottom: 2px solid #FFFFFF;
-                font-size: calc(1.3rem/2);
-                color: #FFFFFF;
-                z-index: 1;
-            }
-            input[type='image']{
-                @include pos();
-                right: calc(5.6rem/2);
-                top: calc(1.5rem/2);
-                width: calc(1.7rem/2);
-                height: calc(1.7rem/2);
-                outline: none;
-                z-index: 1;
-            }
-        }
-    }
+    
     .content_list{
         width: 16rem;
-        padding-top: 1.45rem;
         ul{
             width: 16rem;
             li{

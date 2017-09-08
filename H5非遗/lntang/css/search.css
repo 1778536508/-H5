@@ -152,11 +152,10 @@ html, body, .box, .box_list ul li a img, .content .box_search .search a img, .co
         outline: none;
         background-color: transparent;
         border-bottom: 2px solid #727272;
-        font-size: 1rem;
+        font-size: 0.8rem;
         color: #000000;
         float: left;
-        margin-left: 1rem;
-        margin-top: 0.45rem; }
+        margin-left: 1rem; }
       .content .box_search .search input[type='image'] {
         position: absolute;
         bottom: 0.5rem;
@@ -191,7 +190,7 @@ html, body, .box, .box_list ul li a img, .content .box_search .search a img, .co
         padding-top: 1rem; }
         .content .box_search .sou_content ul li {
           width: 16rem;
-          height: calc(28rem/2); }
+          height: calc(26rem/2); }
           .content .box_search .sou_content ul li .forma_imaGes {
             width: 16rem;
             height: 10rem; }

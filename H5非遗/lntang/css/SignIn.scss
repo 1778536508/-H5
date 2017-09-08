@@ -1,0 +1,67 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    box-sizing: border-box;
+}
+%full{
+    width: 100%;
+    height: 100%;
+}
+@mixin pos($p:absolute){
+    position: $p;
+}
+@mixin clearfix{
+    zoom: 1;
+    &:after{
+      display: block;
+      clear: both;
+      content: '';
+    }
+}
+html,body,.box{
+    @extend %full;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.sign_in{
+    width: 15rem;
+    height: 10rem;
+//  border: 1px solid;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+    margin: 5rem auto;
+    overflow: hidden;
+    padding-top: 3rem;
+    box-sizing: border-box;
+    padding-left: 1.5rem;
+    form{
+        &>div{
+            width: 16rem;
+            label{
+                font-size: 0.8rem;
+            }
+            input{
+                width: 8rem;
+                height: 1.2rem;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+                box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
+            }
+        }
+    }
+    .Sigin{
+        width: 16rem;
+        #Sigin{
+            width: 2rem;
+            height: 2rem;
+            border: none;
+//          outline: none;
+            
+        }
+    }
+}

@@ -18,11 +18,12 @@
 		<link rel="stylesheet" type="text/css" href="css/Official.css"/>
 		<script src="links/js/rem.js" type="text/javascript" charset="utf-8"></script>
 		<script src="links/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="assets/js/Menu2.js" type="text/javascript" charset="utf-8"></script>
+		
 		<link rel="stylesheet" type="text/css" href="links/swiper/css/swiper.min.css"/>
 		<script src="links/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/banner.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/scrollBar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/Menu2.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="box">
@@ -64,32 +65,21 @@
 			</div>-->
 			
 			
-			
+			<!--搜索-->
+			<div class="content_search" id="content_search">
+				
+			</div>
 			
 			<!--content-->
-			<div class="content">
-				<!--搜索-->
-				<div class="content_search" id="content_search">
-					<!--删除按钮-->
-					<div class="banner_remove" id="">
-						<a href="javascript:;">
-							<span>|</span>
-							<img src="links/img/Combined Shape.png" id="val_rem"/>
-						</a>
-					</div>
-					<!--搜索-->
-					<div class="banner_search">
-						<input type="text" placeholder="请输入非遗相关内容" id="Text_inp"/>
-						<input type="image" src="links/img/sousuo.png" id="Text"/>
-					</div>
-				</div>
+			<div class="content" style="background: url(images/Bitmap.png);background-size:100% 100% ;">
+				
 				<div class="swiper-container_banner">
 				    <div class="swiper-wrapper">
 				        <div class="swiper-slide">
 				        	<h2 class="swiper_h2">服务模式</h2>
 				        	<ul>
 								<li>
-									<a>
+									<a href="javascript:;">
 										<h4>
 											<img src="images/Computer shape.png"/>
 											<span>O2O服务</span>
@@ -100,7 +90,7 @@
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="javascript:;">
 										<h4>
 											<img src="images/Content authentication.png"/>
 											<span>真品认证体系—诚品宝</span>
@@ -111,7 +101,7 @@
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="javascript:;">
 										<h4>
 											<img src="images/Shape.png"/>
 											<span>文化产权</span>
@@ -122,7 +112,7 @@
 									</a>
 								</li>
 								<li>
-									<a>
+									<a href="javascript:;">
 										<h4>
 											<img src="images/Authentication.png"/>
 											<span>国际非遗认证服务</span>
@@ -135,10 +125,16 @@
 							</ul>
 				        </div>
 				        <div class="swiper-slide">
-				        	<div class="background_image" style="background: url(images/Bitmap.png);background-size:100% 100% ;">
+				        	<div class="background_image">
 				        		<h2 class="background_image_h2">关于非遗国际DIICH</h2>
-				        		<div class="clIck">
+				        		<div class="clIck" id="clIck_slide">
 									<div id="triangle-right"></div>
+								</div>
+								<!--视频-->
+								<div class="viDeo2" id="viDeo_slide">
+									<video id="viDeo_slide_video" preload="preload" poster width="100%">
+										<source src="links/img/mp4.mp4">
+									</video>
 								</div>
 				        	</div>
 				        </div>
@@ -157,7 +153,7 @@
 				        	</div>
 				        </div>
 				        <div class="swiper-slide">
-				        	<div class="background_image2" style="background: url(images/Bitmap.png);background-size:100% 100% ;">
+				        	<div class="background_image2">
 				        		<img src="links/img/logo.png"/>
 				        	</div>
 				        </div>
@@ -168,7 +164,7 @@
 				        	</div>
 				        </div>
 				        <div class="swiper-slide">
-				        	<div class="background_image3" style="background: url(images/Bitmap.png);background-size:100% 100% ;">
+				        	<div class="background_image3">
 				        		<img src="links/img/logo.png"/>
 				        		<p id="declare">我要申报</p>
 				        	</div>
@@ -183,10 +179,43 @@
 			
 			<!--非遗list-->
 			<div id="gong"></div>
-
 			
+			
+			<!--pdf-->
+			<div class="plugin" id="plugin">
+				<embed name="plugin" src="pdf/aaaa.pdf" internalinstanceid="3" title="">
+			</div>
+
+
 			
 			
 		</div>
 	</body>
 </html>
+<script type="text/javascript">
+	
+	//official
+	  var clIck_slide = document.getElementById('clIck_slide');
+	  var viDeo_slide = document.getElementById('viDeo_slide');
+	  var viDeo_slide_video = document.getElementById('viDeo_slide_video');
+	  clIck_slide.onclick = function(){
+	  	clIck_slide.style.display = 'none';
+	  	viDeo_slide.style.display = 'block';
+	  	 viDeo_slide_video.play();
+	  	 cllback();
+	  }
+	  viDeo_slide.onclick = function(){
+	  	viDeo_slide_video.pause();
+	  	clIck_slide.style.display = 'block';
+	  	cllback();
+	  }
+	  
+	  function cllback(){
+	  	if(viDeo_slide_video.ended){
+	  		viDeo_slide_video.pause();
+	  	 	clIck_slide.style.display = 'block';
+	  	 }
+	  }
+	
+	
+</script>

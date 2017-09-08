@@ -92,6 +92,57 @@ html, body, .box {
         font-size: 0.45rem;
         color: #c0c0c0; }
 
+.content_search {
+  width: 16rem;
+  height: calc(4.9rem/2);
+  margin: 0 auto;
+  background: #F5F6F8;
+  z-index: 2;
+  position: relative; }
+  .content_search .banner_remove {
+    position: absolute;
+    top: 0.6rem;
+    right: calc(2.1rem/2);
+    z-index: 1; }
+    .content_search .banner_remove a {
+      display: block;
+      zoom: 1;
+      margin-top: 0.3rem;
+      margin-right: 0.1rem; }
+      .content_search .banner_remove a:after {
+        display: block;
+        clear: both;
+        content: ''; }
+      .content_search .banner_remove a img {
+        width: calc(1rem/2);
+        height: calc(1rem/2);
+        margin-left: 0.5rem;
+        float: left;
+        margin-top: 0.15rem; }
+      .content_search .banner_remove a span {
+        font-size: 0.5rem;
+        float: left; }
+  .content_search .banner_search {
+    z-index: 1; }
+    .content_search .banner_search input[type='text'] {
+      padding-left: calc(2.1rem/2);
+      width: calc(16rem-2.1rem/2);
+      height: calc(4.9rem/2);
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-size: calc(1.2rem/2);
+      color: #777777;
+      z-index: 1; }
+    .content_search .banner_search input[type='image'] {
+      position: absolute;
+      right: calc(5.6rem/2);
+      top: calc(2rem/2);
+      width: calc(1.2rem/2);
+      height: calc(1.2rem/2);
+      outline: none;
+      z-index: 1; }
+
 .content {
   margin: 0 auto;
   width: 16rem;
@@ -99,54 +150,13 @@ html, body, .box {
   overflow: hidden;
   background: #1b1b1b;
   position: relative; }
-  .content .content_search {
-    margin: 0 auto;
-    width: 16rem;
-    height: calc(4.9rem/2);
-    background: rgba(255, 255, 255, 0.2);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2; }
-    .content .content_search .banner_remove {
-      position: absolute;
-      top: 0.6rem;
-      right: calc(2.1rem/2);
-      z-index: 1; }
-      .content .content_search .banner_remove a {
-        display: block; }
-        .content .content_search .banner_remove a img {
-          width: calc(1.3rem/2);
-          height: calc(1.4rem/2);
-          margin-left: 0.1rem; }
-    .content .content_search .banner_search {
-      z-index: 1; }
-      .content .content_search .banner_search input[type='text'] {
-        padding-left: calc(2.1rem/2);
-        width: calc(16rem-2.1rem/2);
-        height: calc(4.9rem/2);
-        border: none;
-        outline: none;
-        background-color: transparent;
-        font-size: calc(1.3rem/2);
-        color: #FFFFFF;
-        z-index: 1; }
-      .content .content_search .banner_search input[type='image'] {
-        position: absolute;
-        right: calc(5.6rem/2);
-        top: calc(1.5rem/2);
-        width: calc(1.7rem/2);
-        height: calc(1.7rem/2);
-        outline: none;
-        z-index: 1; }
   .content .swiper-container_banner {
     width: 16rem;
     height: 100%; }
     .content .swiper-container_banner .swiper-wrapper {
       width: 100%; }
       .content .swiper-container_banner .swiper-wrapper .swiper-slide {
-        width: 100%;
-        background: #1b1b1b; }
+        width: 100%; }
         .content .swiper-container_banner .swiper-wrapper .swiper-slide .swiper_h2 {
           font-size: calc(1.9rem/2);
           font-family: PingFangSC-Medium;
@@ -213,9 +223,10 @@ html, body, .box {
             border: 1px solid rgba(255, 255, 255, 0.5);
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 10rem;
             margin-left: -1.25rem;
-            margin-top: -1.25rem; }
+            margin-top: -1.25rem;
+            z-index: 999; }
             .content .swiper-container_banner .swiper-wrapper .swiper-slide .background_image .clIck #triangle-right {
               width: 0;
               height: 0;
@@ -230,6 +241,9 @@ html, body, .box {
               margin-top: -0.5rem; }
           .content .swiper-container_banner .swiper-wrapper .swiper-slide .background_image .clIck:hover {
             background: rgba(255, 255, 255, 0.3); }
+          .content .swiper-container_banner .swiper-wrapper .swiper-slide .background_image .viDeo2 {
+            display: none;
+            padding-top: 6rem; }
         .content .swiper-container_banner .swiper-wrapper .swiper-slide .swiper-slide_width {
           width: calc(29.6rem/2);
           margin: calc(2rem/2) auto; }
@@ -370,5 +384,18 @@ html, body, .box {
     #gong .name_list ul p {
       float: left;
       height: 9rem; }
+
+.plugin {
+  width: 16rem;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  margin-left: -8rem;
+  top: 0;
+  z-index: 999;
+  display: none; }
+  .plugin embed {
+    width: 100%;
+    height: 100%; }
 
 /*# sourceMappingURL=Official.css.map */

@@ -11,6 +11,24 @@ $(function () {
 					'</header>';
 	$('#box_header').append(str_header);
 	
+	//搜索
+	var str_sou = '<div class="banner_remove" id="">'+
+						'<a href="javascript:;">'+
+							'<span>|</span>'+
+							'<img src="http://47.95.32.236/lntang/links/img/Combined Shape.png" id="val_rem"/>'+
+						'</a>'+
+					'</div>'+
+					'<div class="banner_search">'+
+						'<input type="text" placeholder="请输入非遗相关内容" id="Text_inp"/>'+
+						'<input type="image" src="http://47.95.32.236/lntang/links/img/sousuo.png" id="Text"/>'+
+					'</div>';
+	$('#content_search').html(str_sou);
+	
+	
+	
+	
+	
+	
 	//小功能
 	var str ='<div class="menu" id="menu">'+
 				'<span>'+
@@ -118,7 +136,7 @@ $(function () {
 		
 		Load_la();
         function Load_la(){
-        	if($('#Load_la').children('img').length >= 2){
+        	if($('#inherit_content_ul').children('li').length <= 2){
         		$('#img1').hide();
         		$('#img2').hide();
         	}else{
@@ -133,6 +151,18 @@ $(function () {
 				});
         	}
         }
+        
+        //非遗在中国
+        inherit_content2();
+        function inherit_content2(){
+        	var numLength = $('.inherit_content2').children('p').length;
+        	if(numLength <= 0){
+        		$('.inherit_content2').css('display','none');
+        	}
+        }
+        
+        
+        
 		
 	
 		setTimeout(function(){
@@ -227,9 +257,9 @@ $(function () {
 		    		event.stopPropagation();
 		    	}else{
 		    		if($("#content_search").is(":hidden")){
-						$('#content_search').show();
+						$('#content_search').show(500);
 					}else{
-						$('#content_search').hide();
+						$('#content_search').hide(500);
 					}
 		    	}
 				
@@ -660,7 +690,8 @@ $(function () {
 		
 	    
 	    
-		
+	  
+	  
 		
 	    
 	   

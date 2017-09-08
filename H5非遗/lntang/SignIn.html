@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>非遗H5视觉</title>
+		<meta name="author" content="...">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <meta name="author" content="....">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Pragma" content="no-cache">
+		<meta name="description" content="...." />
+		<link rel="stylesheet" type="text/css" href="css/SignIn.css"/>
+		<script src="links/js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<script src="links/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="box">
+			
+			<div class="sign_in">
+				<form action="" method="post" id="form_Sign">
+					<div>
+						<label>账户:</label>
+						<input type="text" name="loginName"/>
+					</div>
+					<div>
+						<label>密码:</label>
+						<input type="password" name="password"/>
+					</div>
+				</form>
+				<div class="Sigin">
+					<input type="button" name="Sigin" id="Sigin" value="登录" />
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	
+	$('#Sigin').click(function(){
+		$.ajax({
+	        cache: true,
+	        type: "POST",
+	        url: "http://47.95.32.236/user/login",
+	        data: $('#form_Sign').serialize(),	 // 你的formid
+	        dataType: "json",
+	        async: true,
+//	        xhrFields:{
+//	            withCredentials:true
+//	        },
+	        error: function(request) {
+	            alert("用户不存在");
+	        },
+	        success: function(data){
+	        	console.log(data);
+	        	
+	        	if(data.code == 0){
+	        		alert('登陆成功');
+	        		location.href='http://47.95.32.236/lntang/home.html';
+	        	}else{
+	        		alert(data.msg);
+	        	}
+	        	
+	        }
+	      })
+	})
+</script>
+
